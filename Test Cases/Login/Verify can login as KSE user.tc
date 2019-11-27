@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify can login as KSE user</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b857d1b7-e475-4fff-adf8-b062f8af0e0c</testCaseGuid>
+</TestCaseEntity>

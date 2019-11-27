@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>Edit_Folder_Path</name>
+   <tag></tag>
+   <locator>/Window/Window[@Name=&quot;Browse For Folder&quot;]/Edit[1]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>
