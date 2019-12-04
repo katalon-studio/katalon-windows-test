@@ -20,20 +20,33 @@ import internal.GlobalVariable as GlobalVariable
 'Open default project'
 Windows.callTestCase(findTestCase('Common/Project/Verify can open project'), [:], FailureHandling.STOP_ON_FAILURE)
 
-'Collapse all items on Tests Explorer'
-Windows.click(findWindowsObject("Object Repository/Tests Explorer/Button_Collapse_All"))
+'Click on the Object Repository tree item'
+Windows.click(findWindowsObject("Object Repository/Tests Explorer/TreeItem_Root_Object_Repository"))
 
-'Double click on the Object Repository tree item'
-Windows.doubleClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_Root_Object_Repository"))
+'Click on the File menu'
+Windows.click(findWindowsObject("Object Repository/MenuBar/MenuItem_File"))
 
-'Verify the target object presents'
-WindowsEnhancedKeyword.verifyElementPresent(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"), FailureHandling.STOP_ON_FAILURE)
+'Click on the New menu item'
+Windows.click(findWindowsObject("Object Repository/MenuBar/File/MenuItem_New"))
 
-'Double click to open'
-Windows.doubleClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"))
+'Click on the Test Object menu item'
+Windows.click(findWindowsObject("Object Repository/MenuBar/File/MenuItem_New_Test_Object"))
 
-'Wait for KS to open the opened object'
+'Click on Test Object menu item'
+Windows.click(findWindowsObject("Object Repository/Tests Explorer/Menu/MenuItem_Test_Object"))
+
+'Wait for New Object Repository dialog for 2 seconds'
+Windows.delay(2)
+
+'Click on OK button'
+Windows.click(findWindowsObject("Object Repository/Windows/Button_OK"))
+
+'Wait for new Test Object created'
 Windows.delay(5)
 
-'Verify the object part presents'
+'Verify new created test object that presents on Tests Explorer'
+WindowsEnhancedKeyword.verifyElementPresent(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"), FailureHandling.STOP_ON_FAILURE)
+
+'Verify new test object part that\'s created on main part stack'
 WindowsEnhancedKeyword.verifyElementPresent(findWindowsObject("Object Repository/MainPartStack/TabItem_New_Test_Object"), FailureHandling.STOP_ON_FAILURE)
+

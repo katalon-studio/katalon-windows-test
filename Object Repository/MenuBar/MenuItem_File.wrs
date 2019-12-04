@@ -3,7 +3,7 @@
    <description></description>
    <name>MenuItem_File</name>
    <tag></tag>
-   <locator>//Window/MenuBar[1]/MenuItem[@Name=&quot;File&quot;]</locator>
+   <locator>//MenuBar[@Name=&quot;Application&quot;]/MenuItem[@Name=&quot;File&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -66,7 +66,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.7145894.3.-2147483646.3220.840242515.1</value>
+      <value>42.5574482.3.-2147483646.13204.190518599.1</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -171,7 +171,7 @@
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>21736</value>
+      <value>13204</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

@@ -20,20 +20,34 @@ import internal.GlobalVariable as GlobalVariable
 'Open default project'
 Windows.callTestCase(findTestCase('Common/Project/Verify can open project'), [:], FailureHandling.STOP_ON_FAILURE)
 
-'Collapse all items on Tests Explorer'
-Windows.click(findWindowsObject("Object Repository/Tests Explorer/Button_Collapse_All"))
+'Right click on the Object Repository tree item'
+Windows.rightClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_Root_Object_Repository"))
 
-'Double click on the Object Repository tree item'
-Windows.doubleClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_Root_Object_Repository"))
+'Switch to desktop to locate the context menu'
+Windows.switchToDesktop()
 
-'Verify the target object presents'
-WindowsEnhancedKeyword.verifyElementPresent(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"), FailureHandling.STOP_ON_FAILURE)
+'Click on New menu item'
+Windows.click(findWindowsObject("Object Repository/Tests Explorer/Menu/MenuItem_New"))
 
-'Double click to open'
-Windows.doubleClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"))
+'Switch back to application to locate the secondary context menu item'
+Windows.switchToApplication()
 
-'Wait for KS to open the opened object'
-Windows.delay(5)
+'Click on Web Service Request menu item'
+Windows.click(findWindowsObject("Object Repository/Tests Explorer/Menu/MenuItem_WebService_Request"))
 
-'Verify the object part presents'
-WindowsEnhancedKeyword.verifyElementPresent(findWindowsObject("Object Repository/MainPartStack/TabItem_New_Test_Object"), FailureHandling.STOP_ON_FAILURE)
+'Wait for New Web Service Request dialog for 2 seconds'
+Windows.delay(2)
+
+'Click on Request Type combobox'
+Windows.click(findWindowsObject("Object Repository/Windows/New Request Dialog/ComboBox_RequestType"))
+
+'Switch to desktop to locate RESTful item'
+Windows.switchToDesktop()
+
+'Select RESTful item'
+Windows.click(findWindowsObject("Object Repository/Windows/New Request Dialog/ListItem_RESTFul"))
+
+'Switch back to application'
+Windows.switchToApplication()
+
+
