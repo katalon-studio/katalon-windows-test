@@ -2,7 +2,6 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import org.openqa.selenium.Keys
 
-import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable as GlobalVariable
@@ -11,7 +10,7 @@ Windows.startApplication(GlobalVariable.G_appPath)
 
 Windows.delay(GlobalVariable.G_longTimeout)
 
-WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL + "O"))
+Windows.sendKeys(findWindowsObject("Object Repository/MenuBar/File"), Keys.chord(Keys.CONTROL + "O"))
 
 Windows.clearText(findWindowsObject("Object Repository/Windows/Browser For Folder/Edit_Folder_Path"))
 

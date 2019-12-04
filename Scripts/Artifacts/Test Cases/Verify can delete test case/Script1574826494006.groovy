@@ -14,4 +14,31 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+Windows.startApplication(GlobalVariable.G_appPath)
+
+Thread.sleep(3000)
+
+Windows.click(findWindowsObject('Object Repository/Dialogs/Plugins/Close'))
+
+WindowsTestObject firstFolderHasTestCase = findWindowsObject('Object Repository/Tests Explorer/firstFolderHasTestCase')
+
+WindowsTestObject firstTestCase = findWindowsObject('Object Repository/Tests Explorer/FirstTestCase')
+
+Windows.click(firstTestCase)
+
+Windows.sendKeys(firstTestCase, Keys.chord(Keys.CONTROL, 'c'))
+
+Windows.sendKeys(firstTestCase, Keys.DELETE)
+
+//WindowsTestObject deletedTestCase = Windows.findElement(firstTestCase)
+//assert  deletedTestCase == null
+
+Windows.sendKeys(firstTestCase, Keys.chord(Keys.CONTROL, 'v')) // Restore deleted test case
+
+Windows.closeApplication()
+
+
+
 

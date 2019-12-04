@@ -16,19 +16,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-/* [Script]
- * 1. Prepare 2 folder & 1 test case
- * 2. Cut a test case from folder 1
- * 3. Paste the test case into folder 2
- * 4. Verify:
- *    - The test case is disapeared in folder 1
- *    - The test case is appreared in folder 2
- * 5. Cut the test case in folder 2 and paste back to folder 1 
- * */
+/**
+ * [Script]
+ * 1. Create 1 test case in the root folder (Test Cases)
+ * 2. Verify if the test case are created successfully
+ * 3. Copy the test case from folder 1 to folder 2
+ * 4. Verify if 
+ */
+
+String firstFolderName = UUID.randomUUID().toString();
+String secondFolderName = UUID.randomUUID().toString();
 
 Windows.startApplication(GlobalVariable.G_appPath)
 
-Thread.sleep(3000)
+Thread.sleep(GlobalVariable.G_longTimeout)
 
 Windows.click(findWindowsObject('Object Repository/Dialogs/Plugins/Close'))
 
@@ -36,12 +37,15 @@ WindowsTestObject firstTestCase = findWindowsObject('Object Repository/Tests Exp
 
 Windows.click(firstTestCase)
 
-Windows.sendKeys(findWindowsObject('Object Repository/Tests Explorer/FirstTestCase'), Keys.chord(Keys.CONTROL, 'x'))
+Windows.sendKeys(firstTestCase, Keys.chord(Keys.CONTROL, 'c'))
 
-Windows.sendKeys(findWindowsObject('Object Repository/Tests Explorer/FirstTestCase'), Keys.chord(Keys.CONTROL, 'v'))
+Windows.sendKeys(firstTestCase, Keys.chord(Keys.CONTROL, 'v'))
 
-//String pastedTestCaseName = firstTestCase.getAttribute('Name')
-//pastedTestCase = Windows.findElement(pastedTestCaseName)
-//assert pastedtestCase != null
+//String clonedTestCaseName = firstTestCase.getAttribute('Name') + ' - Copy'
+//clonedTestCase = Windows.findElement(clonedTestCaseName)
+//assert clonedTestCase != null
 
 Windows.closeApplication()
+
+
+
