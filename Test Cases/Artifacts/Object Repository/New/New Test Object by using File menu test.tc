@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Verify can new test object</name>
+   <name>New Test Object by using File menu test</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>3ae46da0-896a-4c3b-8f0f-72a1165461f9</testCaseGuid>
+   <testCaseGuid>c4f3658e-fdae-421c-a289-e01c42ba709e</testCaseGuid>
 </TestCaseEntity>

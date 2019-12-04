@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Open by context menu test</name>
+   <name>New Test Object by using context menu test</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>5b720fbc-46b4-4fe1-a4aa-f944ee195b1d</testCaseGuid>
+   <testCaseGuid>934f6f89-8d18-4165-a787-fcc57de825df</testCaseGuid>
 </TestCaseEntity>

@@ -26,14 +26,23 @@ Windows.click(findWindowsObject("Object Repository/Tests Explorer/Button_Collaps
 'Double click on the Object Repository tree item'
 Windows.doubleClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_Root_Object_Repository"))
 
-'Verify the target object presents'
+'Verify the target object present'
 WindowsEnhancedKeyword.verifyElementPresent(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"), FailureHandling.STOP_ON_FAILURE)
 
-'Double click to open'
-Windows.doubleClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"))
+'Right click to show context menu'
+Windows.rightClick(findWindowsObject("Object Repository/Tests Explorer/TreeItem_New_Test_Object"))
+
+'Switch to desktop to locate Open menu item'
+Windows.switchToDesktop()
+
+'Click on Open menu item'
+Windows.click(findWindowsObject("Object Repository/Tests Explorer/Menu/MenuItem_Open"))
+
+'Switch back to application'
+Windows.switchToApplication()
 
 'Wait for KS to open the opened object'
 Windows.delay(5)
 
-'Verify the object part presents'
+'Verify the object part present'
 WindowsEnhancedKeyword.verifyElementPresent(findWindowsObject("Object Repository/MainPartStack/TabItem_New_Test_Object"), FailureHandling.STOP_ON_FAILURE)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>TabItem_New_Test_Object</name>
+   <name>ComboBox_RequestType</name>
    <tag></tag>
-   <locator>//TabItem[@Name=&quot;New Test Object&quot; and @HelpText=&quot;Object Repository/New Test Object&quot;]</locator>
+   <locator>//ComboBox[@Name=&quot;Request Type&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -22,16 +22,9 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>IsSelected</name>
-      <type>Main</type>
-      <value>True</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>New Test Object</value>
+      <value>Request Type</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -45,14 +38,14 @@
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value></value>
+      <value>ComboBox</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>FrameworkId</name>
       <type>Main</type>
-      <value>SWT</value>
+      <value>Win32</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -66,14 +59,21 @@
       <matchCondition>equals</matchCondition>
       <name>IsKeyboardFocusable</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.4786692.4.-22</value>
+      <value>42.13109858</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ExpandCollapseState</name>
+      <type>Main</type>
+      <value>Collapsed</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -87,14 +87,7 @@
       <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>25</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>SelectionContainer</name>
-      <type>Main</type>
-      <value>{New Test Object, SWT_Window0, 42.4786692}</value>
+      <value>23</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -122,14 +115,14 @@
       <matchCondition>equals</matchCondition>
       <name>HelpText</name>
       <type>Main</type>
-      <value>Object Repository/New Test Object</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value></value>
+      <value>13109858</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -150,7 +143,7 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>tab item</value>
+      <value>combo box</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -164,28 +157,28 @@
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>135</value>
+      <value>410</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>478</value>
+      <value>515</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>83</value>
+      <value>272</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>18352</value>
+      <value>26836</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

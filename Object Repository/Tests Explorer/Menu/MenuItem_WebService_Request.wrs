@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>MenuItem_WebService_Request</name>
+   <tag></tag>
+   <locator>Web Service Request</locator>
+   <locatorStrategy>NAME</locatorStrategy>
+</WindowsElementEntity>
