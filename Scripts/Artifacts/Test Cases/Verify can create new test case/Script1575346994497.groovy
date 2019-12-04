@@ -14,4 +14,31 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+String newTestCaseName = UUID.randomUUID().toString()
+
+Windows.startApplication(GlobalVariable.G_appPath)
+
+Thread.sleep(3000)
+
+Windows.click(findWindowsObject('Object Repository/Dialogs/Plugins/Close'))
+
+Windows.click(findWindowsObject('Object Repository/MenuBar/File'))
+
+Windows.click(findWindowsObject('Object Repository/MenuBar/File_New'))
+
+Windows.click(findWindowsObject('Object Repository/MenuBar/File_New_TestCase'))
+
+Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Name'), newTestCaseName)
+
+Windows.click(findWindowsObject('Object Repository/Dialogs/New Test Case/OK'))
+
+//newTestCase = Windows.findElement(newTestCaseName)
+//assert newTestCase != null
+
+Windows.closeApplication()
+
+
+
 
