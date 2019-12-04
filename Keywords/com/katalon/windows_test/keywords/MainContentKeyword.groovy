@@ -1,3 +1,5 @@
+package com.katalon.windows_test.keywords
+
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -17,17 +19,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
+import org.openqa.selenium.WebElement
 
-public class NamingUtil {
-	public static String generateRandomUUID() {
-		return UUID.randomUUID().toString();
-	}
+public class MainContentKeyword {
 	
-	public static String generateTestCaseFolderName() {
-		return generateRandomUUID();
-	}
-
-	public static String generateTestCaseName() {
-		return generateRandomUUID();
+	static WebElement findTabItem(String tabItemName) {
+		String tabItemXPath = String.format('//Tab[@Name="%s"]/TabItem[@Name="%s"]',
+				tabItemName, tabItemName);
+		return Windows.getDriver().findElementByXPath(tabItemXPath);
 	}
 }

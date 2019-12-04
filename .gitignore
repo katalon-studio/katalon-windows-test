@@ -14,3 +14,6 @@ build
 .classpath
 
 .project
+settings/internal/com.kms.katalon.composer.testcase.properties
+settings/internal/com.kms.katalon.execution.properties
+settings/internal/com.kms.katalon.execution.webui.properties

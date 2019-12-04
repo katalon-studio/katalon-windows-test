@@ -6,7 +6,7 @@
    <UUID>3c552b55-ab0c-4d02-bbbe-fc17bc1ae43e</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>C:\Users\thongnmtran\Desktop\workspace\katalon-windows-test\katalon-window-test.prj</projectFileLocation>
+   <projectFileLocation>/Users/katalon/Documents/thong/workplace/katalon-windows-test/katalon-window-test.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

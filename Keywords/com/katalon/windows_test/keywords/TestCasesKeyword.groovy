@@ -1,3 +1,4 @@
+package com.katalon.windows_test.keywords
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -22,28 +23,29 @@ import org.openqa.selenium.Keys as Keys
 import org.apache.commons.lang3.StringUtils
 import org.openqa.selenium.WebElement
 
-public class TestCaseUtil {
-	public static final String ROOT_TEST_CASES_FOLDER_NAME = "Test Cases";
+public class TestCasesKeyword {
+	static final String ROOT_TEST_CASES_FOLDER_NAME = "Test Cases";
 
-	public static void createFolder(String folderName, String parentFolderName) {
+	static WebElement createTestCase() {
+		return createTestCase(NamingKeyword.generateTestCaseName());
+	}
+
+	static void createTestCase(String testCaseName) {
+		MenubarKeyword.openNewMenu();
+		Windows.click(findWindowsObject('Object Repository/MenuBar/File_New_TestCase'));
+		Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Name'), testCaseName);
+		Windows.click(findWindowsObject('Object Repository/Dialogs/New Test Case/OK'));
+	}
+
+	static void createFolder(String folderName, String parentFolderName) {
 		if (!StringUtils.isBlank(parentFolderName)) {
-			KatalonUtil.focusToTestsExplorerTreeItem(parentFolderName);
+			TestsExplorerKeyword.focusToTreeItem(parentFolderName);
 		} else {
-			KatalonUtil.focusToTestsExplorerTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
+			TestsExplorerKeyword.focusToTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
 		}
 	}
 
-	public static void createTestCaseAtFocusedFolder(String testCaseName) {
-		Windows.click(findWindowsObject('Object Repository/MenuBar/File'));
-		Windows.click(findWindowsObject('Object Repository/MenuBar/File_New'));
-		Windows.click(findWindowsObject('Object Repository/MenuBar/File_New_TestCase'));
-		Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Name'), testCaseName);
-		Windows.click(findWindowsObject('Object Repository/Dialogs/New Test Case/OK'))
-	}
-
-	public static WebElement createTestCase(String targetFolderName, boolean createFolderIfNotExist) {
-		String newTestCaseName = NamingUtil.generateTestCaseName();
-
+	static moveTestCase(String testCaseName, String targetFolderName, boolean createFolderIfNotExist) {
 		WebElement targetFolder = null;
 		if (!StringUtils.isBlank(targetFolderName)) {
 			String folderXPath = String.format('//Pane[@Name="Tests Explorer"]//TreeItem[@Name="%s"]', targetFolderName);
@@ -57,15 +59,5 @@ public class TestCaseUtil {
 			targetFolder.click();
 			Windows.sendKeys(targetFolder, Keys.chord(Keys.CONTROL, 'v'))
 		}
-
-		return null;
-	}
-
-	public static WebElement createTestCase(boolean createFolderIfNotExist) {
-		return createTestCase("");
-	}
-
-	public static WebElement createTestCase() {
-		return createTestCase("", true);
 	}
 }
