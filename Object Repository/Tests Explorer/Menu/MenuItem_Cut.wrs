@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>MenuItem_Cut</name>
+   <tag></tag>
+   <locator>//Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Cut&quot;]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>

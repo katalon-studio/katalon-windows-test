@@ -1,13 +1,18 @@
 package com.katalon.windows_test.keywords
 
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.interactions.Actions
+
 import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.WindowsTestObject
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.windows.constants.WindowsDriverConstants
 import com.kms.katalon.core.windows.driver.WindowsDriverFactory
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.windows.keyword.helper.WindowsActionHelper
 
+import io.appium.java_client.AppiumDriver
 import io.appium.java_client.windows.WindowsDriver
 
 public class WindowsEnhancedKeyword {
@@ -45,12 +50,12 @@ public class WindowsEnhancedKeyword {
 		}
 	}
 
-	def static void pressKey(String keys) {
+	def static pressKey(String keys) {
 		WindowsDriver driver = WindowsDriverFactory.getWindowsDriver()
 		driver.getKeyboard().pressKey(keys)
 	}
 
-	def static void cleanAllSessions() {
+	def static cleanAllSessions() {
 		Map<String, Object> userConfigProperties = RunConfiguration.getDriverPreferencesProperties("Windows");
 		if (userConfigProperties == null) {
 			userConfigProperties = new HashMap<String, Object>();
@@ -58,5 +63,15 @@ public class WindowsEnhancedKeyword {
 
 		String remoteAddressURLAsString = (String) userConfigProperties.getOrDefault(WIN_APP_DRIVER_PROPERTY,
 				WindowsDriverConstants.DEFAULT_WIN_APP_DRIVER_URL);
+	}
+	
+	def static dragAnDrop(WindowsTestObject sourceObject, WindowsTestObject targetObject) {
+		WebElement fromElement = Windows.findElement(sourceObject)
+		WebElement toElement = Windows.findElement(targetObject)
+
+		AppiumDriver<?> driver = Windows.getDriver()
+		
+		Actions action = new Actions(driver)
+		action.moveToElement(fromElement).clickAndHold().moveToElement(toElement).release().perform()
 	}
 }
