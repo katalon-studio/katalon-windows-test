@@ -3,7 +3,7 @@
    <description></description>
    <name>MenuItem_Paste</name>
    <tag></tag>
-   <locator>/Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Paste&quot;]</locator>
+   <locator>//Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Paste&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>

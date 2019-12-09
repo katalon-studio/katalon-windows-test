@@ -3,7 +3,7 @@
    <description></description>
    <name>MenuItem_Cut</name>
    <tag></tag>
-   <locator>/Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Cut&quot;]</locator>
+   <locator>//Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Cut&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>

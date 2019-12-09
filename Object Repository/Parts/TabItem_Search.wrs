@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>MenuItem_Properties</name>
+   <name>TabItem_Search</name>
    <tag></tag>
-   <locator>//Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Properties&quot;]</locator>
+   <locator>//Tab[@Name=&quot;Search&quot;]/TabItem[@Name=&quot;Search&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -22,9 +22,16 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>IsSelected</name>
+      <type>Main</type>
+      <value>True</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>Properties</value>
+      <value>Search</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -45,14 +52,14 @@
       <matchCondition>equals</matchCondition>
       <name>FrameworkId</name>
       <type>Main</type>
-      <value></value>
+      <value>SWT</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>AccessKey</name>
       <type>Main</type>
-      <value>p</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -66,7 +73,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.3477398.4.-2147483646.14776.171054689.13</value>
+      <value>42.3612658.4.-16</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -80,7 +87,14 @@
       <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>22</value>
+      <value>25</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>SelectionContainer</name>
+      <type>Main</type>
+      <value>{Search, SWT_Window0, 42.3612658}</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +129,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value>173</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -136,35 +150,42 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>menu item</value>
+      <value>tab item</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsAvailable</name>
+      <type>Main</type>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>242</value>
+      <value>64</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>155</value>
+      <value>595</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>456</value>
+      <value>519</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>14776</value>
+      <value>18876</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

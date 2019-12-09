@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>MenuItem_Properties</name>
+   <name>Window</name>
    <tag></tag>
-   <locator>//Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Properties&quot;]</locator>
-   <locatorStrategy>XPATH</locatorStrategy>
+   <locator>Katalon Studio - 7.0.1-35bc6144 - TestExternalDB - [Location: C:\Users\katalon-test\Katalon Studio\TestExternalDB]</locator>
+   <locatorStrategy>NAME</locatorStrategy>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>CanMinimize</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ItemStatus</name>
       <type>Main</type>
       <value></value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>CanRotate</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>WindowVisualState</name>
+      <type>Main</type>
+      <value>Maximized</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -24,7 +45,28 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>Properties</value>
+      <value>Katalon Studio - 7.0.1-35bc6144 - TestExternalDB - [Location: C:\Users\katalon-test\Katalon Studio\TestExternalDB]</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>CanMaximize</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsTopmost</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsModal</name>
+      <type>Main</type>
+      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -38,35 +80,42 @@
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value></value>
+      <value>SWT_Window0</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>FrameworkId</name>
       <type>Main</type>
-      <value></value>
+      <value>SWT</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>AccessKey</name>
       <type>Main</type>
-      <value>p</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>IsKeyboardFocusable</name>
+      <name>CanMove</name>
       <type>Main</type>
       <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>IsKeyboardFocusable</name>
+      <type>Main</type>
+      <value>True</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.3477398.4.-2147483646.14776.171054689.13</value>
+      <value>42.6423526</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -78,16 +127,23 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>CanResize</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>22</value>
+      <value>728</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>IsEnabled</name>
       <type>Main</type>
-      <value>True</value>
+      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -106,6 +162,13 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>WindowInteractionState</name>
+      <type>Main</type>
+      <value>BlockedByModalWindow</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>HelpText</name>
       <type>Main</type>
       <value></value>
@@ -115,7 +178,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value>173</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -136,35 +199,42 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>menu item</value>
+      <value>window</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsAvailable</name>
+      <type>Main</type>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>242</value>
+      <value>1366</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>155</value>
+      <value>0</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>456</value>
+      <value>0</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>14776</value>
+      <value>10132</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

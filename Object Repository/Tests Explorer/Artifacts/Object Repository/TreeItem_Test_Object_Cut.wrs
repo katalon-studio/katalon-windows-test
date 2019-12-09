@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>MenuItem_Properties</name>
+   <name>TreeItem_Test_Object_Cut</name>
    <tag></tag>
-   <locator>//Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Properties&quot;]</locator>
+   <locator>//Pane[@Name=&quot;Tests Explorer&quot;]//Tree/TreeItem[@Name=&quot;Object Repository&quot;]/TreeItem[@Name=&quot;New Folder&quot;]/TreeItem[@Name=&quot;New Test Object&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -22,9 +22,16 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>IsSelected</name>
+      <type>Main</type>
+      <value>True</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>Properties</value>
+      <value>New Test Object</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -45,28 +52,35 @@
       <matchCondition>equals</matchCondition>
       <name>FrameworkId</name>
       <type>Main</type>
-      <value></value>
+      <value>Win32</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>AccessKey</name>
       <type>Main</type>
-      <value>p</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>IsKeyboardFocusable</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.3477398.4.-2147483646.14776.171054689.13</value>
+      <value>42.2166872.4.941567568.0</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ExpandCollapseState</name>
+      <type>Main</type>
+      <value>LeafNode</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -85,6 +99,13 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>SelectionContainer</name>
+      <type>Main</type>
+      <value>{, SysTreeView32, 42.2166872}</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>IsEnabled</name>
       <type>Main</type>
       <value>True</value>
@@ -94,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>HasKeyboardFocus</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +136,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value>173</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -136,35 +157,42 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>menu item</value>
+      <value>tree item</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsAvailable</name>
+      <type>Main</type>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>242</value>
+      <value>89</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>155</value>
+      <value>107</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>456</value>
+      <value>220</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>14776</value>
+      <value>18352</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
