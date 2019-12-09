@@ -110,4 +110,11 @@ public class WindowsEnhancedKeyword {
 		Actions action = new Actions(driver)
 		action.moveToElement(fromElement).clickAndHold().moveToElement(toElement).release().perform()
 	}
+	
+	def static dragAnDrop(WebElement fromElement, WebElement toElement) {
+		AppiumDriver<?> driver = Windows.getDriver()
+		
+		Actions action = new Actions(driver)
+		action.moveToElement(fromElement).clickAndHold().moveToElement(toElement).release().perform()
+	}
 }
