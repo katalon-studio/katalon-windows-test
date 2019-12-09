@@ -29,4 +29,9 @@
       <initValue>60</initValue>
       <name>G_longTimeout</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
+      <name>G_runSeparated</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

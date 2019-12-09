@@ -43,9 +43,11 @@ import internal.GlobalVariable as GlobalVariable
 String sampleTestCaseName = NamingKeyword.generateTestCaseName()
 String newTestCaseName = NamingKeyword.generateTestCaseName()
 
-Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-Windows.startApplication(GlobalVariable.G_appPath)
-ProjectsKeyword.waitForProjectLoad()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
+	Windows.startApplication(GlobalVariable.G_appPath)
+	ProjectsKeyword.waitForProjectLoad()
+}
 
 Windows.comment('2. Create a sample test case')
 TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
@@ -71,8 +73,10 @@ WindowsEnhancedKeyword.verifyElementPresent(sampleTestCaseTabItem, FailureHandli
 Windows.comment('7. Delete the sample test case')
 TestsExplorerKeyword.deleteTreeItem(newTestCaseName)
 
-Windows.comment('8. Close Katalon Studio')
-MainWindowKeyword.close()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('8. Close Katalon Studio')
+	MainWindowKeyword.close()
+}
 
 
 

@@ -42,9 +42,11 @@ String sampleTestCaseDescription = NamingKeyword.generateTestCaseDescription()
 String sampleTestCaseTag = NamingKeyword.generateTestCaseTag()
 String sampleTestCaseID = TestCasesKeyword.ROOT_TEST_CASES_FOLDER_NAME + '/' + sampleTestCaseName
 
-Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-Windows.startApplication(GlobalVariable.G_appPath)
-ProjectsKeyword.waitForProjectLoad()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
+	Windows.startApplication(GlobalVariable.G_appPath)
+	ProjectsKeyword.waitForProjectLoad()
+}
 
 Windows.comment('2. Create a sample test case with full properties')
 TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName, sampleTestCaseDescription, sampleTestCaseTag)
@@ -71,8 +73,10 @@ Windows.verifyEqual(tag, sampleTestCaseTag, FailureHandling.STOP_ON_FAILURE)
 Windows.comment('5. Delete the sample test case')
 TestsExplorerKeyword.deleteTreeItem(sampleTestCaseName)
 
-Windows.comment('6. Close Katalon Studio')
-MainWindowKeyword.close()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('6. Close Katalon Studio')
+	MainWindowKeyword.close()
+}
 
 
 

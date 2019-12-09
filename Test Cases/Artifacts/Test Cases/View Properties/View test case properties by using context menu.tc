@@ -3,6 +3,11 @@
    <description></description>
    <name>View test case properties by using context menu</name>
    <tag></tag>
-   <comment></comment>
+   <comment>1. Open `Katalon Studio` and wait for project to load
+2. Create a sample test case with full properties
+3. View sample test case properties by using context menu (Right click -> Properties)
+4. Verify all sample test case properties are presented and correct
+5. Delete the sample test case
+6. Close Katalon Studio</comment>
    <testCaseGuid>3988c848-50d2-47d0-8981-2229ad3e5d96</testCaseGuid>
 </TestCaseEntity>

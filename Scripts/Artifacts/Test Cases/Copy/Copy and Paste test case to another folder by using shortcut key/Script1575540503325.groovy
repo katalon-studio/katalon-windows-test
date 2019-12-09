@@ -41,9 +41,11 @@ import org.openqa.selenium.WebElement
 String sampleTestCaseName = NamingKeyword.generateTestCaseName()
 String sampleFolderName = NamingKeyword.generateTestCaseFolderName()
 
-Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-Windows.startApplication(GlobalVariable.G_appPath)
-ProjectsKeyword.waitForProjectLoad()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
+	Windows.startApplication(GlobalVariable.G_appPath)
+	ProjectsKeyword.waitForProjectLoad()
+}
 
 Windows.comment('2. Create a sample test case')
 TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
@@ -70,8 +72,9 @@ TestsExplorerKeyword.deleteTreeItem(sampleFolderName)
 Windows.sleep(1000L)
 TestsExplorerKeyword.deleteTreeItem(sampleTestCaseName)
 
-Windows.comment('8. Close Katalon Studio')
-MainWindowKeyword.close()
-
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('8. Close Katalon Studio')
+	MainWindowKeyword.close()
+}
 
 

@@ -3,6 +3,13 @@
    <description></description>
    <name>Rename test case using shortcut key</name>
    <tag></tag>
-   <comment></comment>
+   <comment>1. Open `Katalon Studio` and wait for project to load
+2. Create a sample test case
+3. Open rename dialog by using shortcut key [F2]
+4. Input new test case name
+5. Verify the sample test case tree item name is changed
+6. Verify the sample test case tab item name is changed
+7. Delete the sample test case
+8. Close Katalon Studio</comment>
    <testCaseGuid>365a3c97-36b8-435e-904f-1c93d814c5f9</testCaseGuid>
 </TestCaseEntity>

@@ -42,9 +42,11 @@ import org.openqa.selenium.WebElement
 String sampleTestCaseName = NamingKeyword.generateTestCaseName()
 String clonedTestCaseName = sampleTestCaseName + ' - Copy'
 
-Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-Windows.startApplication(GlobalVariable.G_appPath)
-ProjectsKeyword.waitForProjectLoad()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
+	Windows.startApplication(GlobalVariable.G_appPath)
+	ProjectsKeyword.waitForProjectLoad()
+}
 
 Windows.comment('2. Create a sample test case')
 TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
@@ -65,8 +67,10 @@ Windows.comment('6. Delete both sample and cloned test case')
 TestsExplorerKeyword.deleteTreeItem(clonedTestCaseName)
 TestsExplorerKeyword.deleteTreeItem(sampleTestCaseName)
 
-Windows.comment('7. Close Katalon Studio')
-MainWindowKeyword.close()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('7. Close Katalon Studio')
+	MainWindowKeyword.close()
+}
 
 
 

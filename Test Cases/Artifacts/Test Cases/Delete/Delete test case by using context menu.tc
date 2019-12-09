@@ -3,11 +3,10 @@
    <description></description>
    <name>Delete test case by using context menu</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for the project to load
+   <comment>1. Open `Katalon Studio` and wait for project to load
 2. Create a sample test case
 3. Delete the created test case by using context menu
 4. Verify the created test case is deleted
-5. Verify the created test case is closed
-6. Close Katalon Studio</comment>
+5. Verify the created test case is closed</comment>
    <testCaseGuid>a9abd8ee-d015-4c97-9864-34f7246ec638</testCaseGuid>
 </TestCaseEntity>

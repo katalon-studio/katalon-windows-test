@@ -3,13 +3,12 @@
    <description></description>
    <name>Create Test Case by using context menu</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for the project to load
+   <comment>1. Open `Katalon Studio` and wait for project to load
 2. Open `New` context menu on `Test Cases` folder
 3. Select `Test Case`
 4. Input test case info
 5. Verify the created test case is existed under Test Cases folder
 6. Verify the created test case is opened
-7. Delete the created test case
-8. Close Katalon Studio</comment>
+7. Delete the created test case</comment>
    <testCaseGuid>9c29a5c2-3a32-4225-a308-a121c6e6f8f7</testCaseGuid>
 </TestCaseEntity>

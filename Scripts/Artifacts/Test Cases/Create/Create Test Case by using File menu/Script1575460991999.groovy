@@ -40,9 +40,11 @@ import org.openqa.selenium.WebElement
 
 String newTestCaseName = NamingKeyword.generateTestCaseName()
 
-Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-Windows.startApplication(GlobalVariable.G_appPath)
-ProjectsKeyword.waitForProjectLoad();
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
+	Windows.startApplication(GlobalVariable.G_appPath)
+	ProjectsKeyword.waitForProjectLoad()
+}
 
 Windows.comment('2. Open `New File` menu')
 MenubarKeyword.openNewMenu();
@@ -65,8 +67,10 @@ WindowsEnhancedKeyword.verifyElementPresent(createdTestCaseTab, FailureHandling.
 Windows.comment('7. Delete the created test case')
 TestsExplorerKeyword.deleteTreeItem(createdTestCaseTreeItem)
 
-Windows.comment('8. Close Katalon Studio')
-MainWindowKeyword.close()
+if (GlobalVariable.G_runSeparated) {
+	Windows.comment('8. Close Katalon Studio')
+	MainWindowKeyword.close()
+}
 
 
 
