@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>MenuItem_New</name>
+   <name>MenuItem_File</name>
    <tag></tag>
-   <locator>//Window/Menu[@Name=&quot;File&quot;]/MenuItem[@Name=&quot;New&quot;]</locator>
+   <locator>//MenuBar[@Name=&quot;Application&quot;]/MenuItem[@Name=&quot;File&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>New</value>
+      <value>File</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -52,21 +52,21 @@
       <matchCondition>equals</matchCondition>
       <name>AccessKey</name>
       <type>Main</type>
-      <value>n</value>
+      <value>Alt+f</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>IsKeyboardFocusable</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.10949852.4.-2147483646.13204.766775741.1</value>
+      <value>42.5574482.3.-2147483646.13204.190518599.1</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>22</value>
+      <value>19</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -109,13 +109,6 @@
       <name>IsRequiredForForm</name>
       <type>Main</type>
       <value>False</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>HelpText</name>
-      <type>Main</type>
-      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -157,21 +150,21 @@
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>540</value>
+      <value>32</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>3</value>
+      <value>0</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>45</value>
+      <value>23</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

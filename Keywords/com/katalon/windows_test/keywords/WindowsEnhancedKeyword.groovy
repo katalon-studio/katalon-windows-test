@@ -46,20 +46,42 @@ public class WindowsEnhancedKeyword {
 		}
 	}
 
-	def static boolean verifyElementPresent(WebElement windowsObject, FailureHandling flowControl) {
-		def isPassed = windowsObject != null;
-		if (flowControl == FailureHandling.STOP_ON_FAILURE) {
+	def static boolean verifyElementPresent(WebElement windowsElement, FailureHandling flowControl) {
+		boolean isPassed = windowsElement != null;
+		try {
 			assert isPassed == true;
+			KeywordUtil.markPassed('Element presents')
+			return isPassed;
+		} catch (Throwable e) {
+			if (flowControl == FailureHandling.OPTIONAL) {
+				KeywordUtil.markWarning("Element does not present")
+			} else if (flowControl == FailureHandling.CONTINUE_ON_FAILURE) {
+				KeywordUtil.markFailed("Element does not present")
+			} else {
+				KeywordUtil.markFailedAndStop("Element does not present")
+			}
+			return false;
 		}
-		if (isPassed) {
-			KeywordUtil.markPassed('Element present');
-		} else {
-			KeywordUtil.markFailed('Element not present');
-		}
-		return isPassed;
 	}
 
-	def static void pressKey(String keys) {
+	def static boolean verifyElementNotPresent(WebElement windowsElement, FailureHandling flowControl) {
+		boolean isPassed = windowsElement == null;
+		try {
+			assert isPassed == true;
+			KeywordUtil.markPassed('Element does not present')
+			return isPassed;
+		} catch (Throwable e) {
+			if (flowControl == FailureHandling.OPTIONAL) {
+				KeywordUtil.markWarning("Element presents")
+			} else if (flowControl == FailureHandling.CONTINUE_ON_FAILURE) {
+				KeywordUtil.markFailed("Element presents")
+			} else {
+				KeywordUtil.markFailedAndStop("Element presents")
+			}
+		}
+	}
+
+	def static void pressKey(CharSequence keys) {
 		WindowsDriver driver = WindowsDriverFactory.getWindowsDriver()
 		driver.getKeyboard().pressKey(keys)
 	}

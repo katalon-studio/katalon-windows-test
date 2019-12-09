@@ -26,7 +26,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>20</initValue>
+      <initValue>60</initValue>
       <name>G_longTimeout</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>MenuItem_New</name>
+   <name>MenuItem_File_New</name>
    <tag></tag>
-   <locator>//Window/Menu[@Name=&quot;File&quot;]/MenuItem[@Name=&quot;New&quot;]</locator>
+   <locator>//Window/MenuBar[1]/MenuItem[@Name=&quot;File&quot;]//MenuItem[@Name=&quot;New&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -66,7 +66,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.10949852.4.-2147483646.13204.766775741.1</value>
+      <value>42.1182760.4.-2147483646.1844.1117187.1</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -157,28 +157,28 @@
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>540</value>
+      <value>613</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>3</value>
+      <value>4</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>45</value>
+      <value>53</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>13204</value>
+      <value>1844</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

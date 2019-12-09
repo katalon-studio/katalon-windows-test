@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>MenuItem_New</name>
+   <name>Button_OK</name>
    <tag></tag>
-   <locator>//Window/Menu[@Name=&quot;File&quot;]/MenuItem[@Name=&quot;New&quot;]</locator>
+   <locator>//Window[@Name=&quot;Test Case Properties&quot;]/Pane//Button[@Name=&quot;OK&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>New</value>
+      <value>OK</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -38,42 +38,35 @@
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value></value>
+      <value>Button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>FrameworkId</name>
       <type>Main</type>
-      <value></value>
+      <value>Win32</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>AccessKey</name>
       <type>Main</type>
-      <value>n</value>
+      <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>IsKeyboardFocusable</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.10949852.4.-2147483646.13204.766775741.1</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ExpandCollapseState</name>
-      <type>Main</type>
-      <value>Collapsed</value>
+      <value>42.4592420</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -87,7 +80,7 @@
       <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>22</value>
+      <value>25</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -122,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value></value>
+      <value>4592420</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -143,42 +136,35 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>menu item</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>IsAvailable</name>
-      <type>Main</type>
-      <value>True</value>
+      <value>button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>540</value>
+      <value>92</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>3</value>
+      <value>729</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>45</value>
+      <value>412</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>13204</value>
+      <value>28068</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Open test case by using context menu</name>
+   <tag></tag>
+   <comment>1. Open `Katalon Studio` and wait for project to load
+2. Create a sample test case
+3. Close the sample test case
+4. Check for sure that the sample test case is really closed
+5. Open the sample test case by using shortcut key [Enter]
+6. Verify the sample test case is opened
+7. Delete the sample test case
+8. Close Katalon Studio</comment>
+   <testCaseGuid>3ecab0b1-14e6-43e0-ba4f-6a861a9abdac</testCaseGuid>
+</TestCaseEntity>

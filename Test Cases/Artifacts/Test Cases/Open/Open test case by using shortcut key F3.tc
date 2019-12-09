@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Open test case by using shortcut key F3</name>
+   <tag></tag>
+   <comment>1. Open `Katalon Studio` and wait for the project to load
+2. Create a sample test case
+3. Close the sample test case
+4. Paste the copied test case by using shortcut key [Ctrl + V]
+5. Verify the cloned test case is appeared (Name: &quot;&lt;sample test case name> - Copy&quot;)
+6. Delete both sample and cloned test case
+7. Close Katalon Studio</comment>
+   <testCaseGuid>3e2eb362-e347-43f9-850a-e82ce306f98f</testCaseGuid>
+</TestCaseEntity>

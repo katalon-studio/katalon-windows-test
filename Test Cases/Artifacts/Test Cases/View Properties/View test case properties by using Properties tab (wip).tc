@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>View test case properties by using Properties tab (wip)</name>
+   <tag></tag>
+   <comment>1. Open `Katalon Studio` and wait for project to load
+2. Create a sample test case with full properties
+3. View sample test case properties by using Properties tab
+4. Verify all sample test case properties are presented and correct
+5. Delete the sample test case
+6. Close Katalon Studio</comment>
+   <testCaseGuid>313b6da2-6162-460d-a55e-e4bbc672374e</testCaseGuid>
+</TestCaseEntity>

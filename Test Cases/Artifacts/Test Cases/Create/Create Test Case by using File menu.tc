@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create Test Case by using File menu</name>
+   <tag></tag>
+   <comment>1. Open `Katalon Studio` and wait for the project to load
+2. Open `New File` menu
+3. Select `Test Case`
+4. Input test case info
+5. Verify the created test case is existed under Test Cases folder
+6. Verify the created test case is opened
+7. Delete the created test case
+8. Close Katalon Studio</comment>
+   <testCaseGuid>178a4cb0-7dd2-4d89-b89f-fc6efc3041f2</testCaseGuid>
+</TestCaseEntity>

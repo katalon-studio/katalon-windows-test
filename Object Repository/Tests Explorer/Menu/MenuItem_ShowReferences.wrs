@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>MenuItem_New</name>
+   <name>MenuItem_ShowReferences</name>
    <tag></tag>
-   <locator>//Window/Menu[@Name=&quot;File&quot;]/MenuItem[@Name=&quot;New&quot;]</locator>
+   <locator>//Pane/Menu[@Name=&quot;Context&quot;]/MenuItem[@Name=&quot;Show References&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>New</value>
+      <value>Show References</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -52,7 +52,7 @@
       <matchCondition>equals</matchCondition>
       <name>AccessKey</name>
       <type>Main</type>
-      <value>n</value>
+      <value>s</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -66,14 +66,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.10949852.4.-2147483646.13204.766775741.1</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ExpandCollapseState</name>
-      <type>Main</type>
-      <value>Collapsed</value>
+      <value>42.2427590.4.-2147483646.21740.28446015.10</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -101,7 +94,7 @@
       <matchCondition>equals</matchCondition>
       <name>HasKeyboardFocus</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -122,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value></value>
+      <value>120</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -148,37 +141,30 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>IsAvailable</name>
-      <type>Main</type>
-      <value>True</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>540</value>
+      <value>242</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>3</value>
+      <value>125</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>45</value>
+      <value>409</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>13204</value>
+      <value>21740</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -192,6 +178,6 @@
       <matchCondition>equals</matchCondition>
       <name>AcceleratorKey</name>
       <type>Main</type>
-      <value></value>
+      <value>Ctrl+R</value>
    </properties>
 </WindowsElementEntity>

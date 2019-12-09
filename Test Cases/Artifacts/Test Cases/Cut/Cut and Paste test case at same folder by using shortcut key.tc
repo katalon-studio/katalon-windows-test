@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test case at same folder by using shortcut key</name>
+   <tag></tag>
+   <comment>1. Open `Katalon Studio` and wait for the project to load
+2. Create a sample test case
+3. Cut the sample test case by using shortcut key [Ctrl + X]
+4. Paste the cut test case at the same folder by using shortcut key [Ctrl + V]
+5. Verify the test case is appeared
+6. Delete the sample test case
+7. Close Katalon Studio</comment>
+   <testCaseGuid>db30a6d9-b568-4e36-869c-ddd05b7a63b7</testCaseGuid>
+</TestCaseEntity>
