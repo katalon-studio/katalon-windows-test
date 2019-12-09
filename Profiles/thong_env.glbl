@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>true</initValue>
+      <initValue>false</initValue>
       <name>G_runSeparated</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

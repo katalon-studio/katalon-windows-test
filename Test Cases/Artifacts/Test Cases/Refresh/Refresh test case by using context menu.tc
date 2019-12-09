@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Refresh test case by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Delete the created test case by using context menu
+4. Verify the created test case is deleted
+5. Verify the created test case is closed</comment>
+   <testCaseGuid>26c05fa0-0750-4fb3-bcf4-ae91d2d2a89c</testCaseGuid>
+</TestCaseEntity>
