@@ -3,8 +3,7 @@
    <description></description>
    <name>Copy and Paste test case to another folder by using shortcut key</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for project to load
-2. Create a sample test case
+   <comment>2. Create a sample test case
 3. Create a sample folder
 4. Copy the created test case by using shortcut key [Ctrl + C]
 5. Paste the copied test case to the sample folder by using shortcut key [Ctrl + V]

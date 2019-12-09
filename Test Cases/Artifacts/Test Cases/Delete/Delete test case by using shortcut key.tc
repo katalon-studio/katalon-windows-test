@@ -3,8 +3,7 @@
    <description></description>
    <name>Delete test case by using shortcut key</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for project to load
-2. Create a sample test case
+   <comment>2. Create a sample test case
 3. Delete the created test case by shortcut key [Delete] -> [Enter]
 4. Verify the created test case is deleted
 5. Verify the created test case is closed</comment>

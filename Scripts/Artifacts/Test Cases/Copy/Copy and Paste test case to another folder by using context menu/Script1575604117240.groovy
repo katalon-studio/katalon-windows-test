@@ -41,7 +41,7 @@ import org.openqa.selenium.WebElement
 String sampleTestCaseName = NamingKeyword.generateTestCaseName()
 String sampleFolderName = NamingKeyword.generateTestCaseFolderName()
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
 	Windows.startApplication(GlobalVariable.G_appPath)
 	ProjectsKeyword.waitForProjectLoad()
@@ -55,12 +55,12 @@ TestCasesKeyword.createFolderUsingFileMenu(sampleFolderName)
 
 Windows.comment('4. Copy the sample test case by using context menu (Right click -> Copy)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Copy'))
+WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Copy'))
 Windows.switchToApplication()
 
 Windows.comment('5. Paste the copied test case at to the sample folder by using context menu (Right click -> Paste)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleFolderName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Paste'))
+WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Paste'))
 Windows.switchToApplication()
 
 Windows.comment('6. Verify the cloned test case is appeared under the sample folder')
@@ -72,7 +72,7 @@ TestsExplorerKeyword.deleteTreeItem(sampleFolderName)
 Windows.sleep(1000L)
 TestsExplorerKeyword.deleteTreeItem(sampleTestCaseName)
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('8. Close Katalon Studio')
 	MainWindowKeyword.close()
 }

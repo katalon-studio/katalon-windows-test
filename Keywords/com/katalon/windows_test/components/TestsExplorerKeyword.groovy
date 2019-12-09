@@ -78,14 +78,14 @@ public class TestsExplorerKeyword {
 
 	static void createFolderAtFocusedFolder(String folderName) {
 		MenubarKeyword.openNewMenu();
-		Windows.click(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New_Folder'));
+		WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New_Folder'));
 		Windows.setText(findWindowsObject('Object Repository/Dialogs/New Folder/Edit_Name'), folderName);
 		Windows.click(findWindowsObject('Object Repository/Dialogs/New Folder/Button_OK'));
 	}
 
 	static void createFolderUsingContextMenu(String folderName, String parentFolderName) {
 		openNewContextMenu(parentFolderName);
-		Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Folder'));
+		WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Folder'));
 		Windows.setText(findWindowsObject('Object Repository/Dialogs/New Folder/Edit_Name'), folderName);
 		Windows.click(findWindowsObject('Object Repository/Dialogs/New Folder/Button_OK'));
 	}

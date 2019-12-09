@@ -42,7 +42,7 @@ import org.openqa.selenium.WebElement
 String sampleTestCaseName = NamingKeyword.generateTestCaseName()
 String sampleFolderName = NamingKeyword.generateTestCaseFolderName()
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
 	Windows.startApplication(GlobalVariable.G_appPath)
 	ProjectsKeyword.waitForProjectLoad()
@@ -75,7 +75,7 @@ WindowsEnhancedKeyword.verifyElementPresent(movedTestCase, FailureHandling.STOP_
 Windows.comment('8. Delete the sample folder')
 TestsExplorerKeyword.deleteTreeItem(sampleFolderName)
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('9. Close Katalon Studio')
 	MainWindowKeyword.close()
 }

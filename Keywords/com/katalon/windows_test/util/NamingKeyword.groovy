@@ -33,10 +33,10 @@ public class NamingKeyword {
 	}
 
 	public static String generateTestCaseDescription() {
-		return "Hello!";
+		return "Hello!" + " (" + generateRandomUUID() + ")";
 	}
 
 	public static String generateTestCaseTag() {
-		return "Hello Tag!";
+		return "Hello Tag!" + " (" + generateRandomUUID() + ")";
 	}
 }

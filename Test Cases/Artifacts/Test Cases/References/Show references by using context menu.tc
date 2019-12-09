@@ -3,11 +3,9 @@
    <description></description>
    <name>Show references by using context menu</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for project to load
-2. Create a sample test case
+   <comment>2. Create a sample test case
 3. Show References by using context menu (Right click -> Show References)
 4. Verify test case references are listed under Search tab
-5. Delete the sample test case
-6. Close Katalon Studio</comment>
+5. Delete the sample test case</comment>
    <testCaseGuid>6e3b0e21-1068-45b0-8dba-56a21c607cbf</testCaseGuid>
 </TestCaseEntity>

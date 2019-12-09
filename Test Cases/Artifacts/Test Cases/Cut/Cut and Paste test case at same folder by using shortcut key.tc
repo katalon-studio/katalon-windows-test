@@ -3,8 +3,7 @@
    <description></description>
    <name>Cut and Paste test case at same folder by using shortcut key</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for project to load
-2. Create a sample test case
+   <comment>2. Create a sample test case
 3. Cut the sample test case by using shortcut key [Ctrl + X]
 4. Paste the cut test case at the same folder by using shortcut key [Ctrl + V]
 5. Verify the test case is appeared

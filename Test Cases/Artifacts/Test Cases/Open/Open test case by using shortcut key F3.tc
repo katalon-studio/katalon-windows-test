@@ -3,8 +3,7 @@
    <description></description>
    <name>Open test case by using shortcut key F3</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for project to load
-2. Create a sample test case
+   <comment>2. Create a sample test case
 3. Close the sample test case
 4. Check for sure that the sample test case is really closed
 5. Open the sample test case by using shortcut key [F3]

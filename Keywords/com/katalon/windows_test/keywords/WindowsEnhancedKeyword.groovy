@@ -90,6 +90,16 @@ public class WindowsEnhancedKeyword {
 		WindowsDriver driver = WindowsDriverFactory.getWindowsDriver()
 		driver.getKeyboard().pressKey(keys)
 	}
+	
+	def static void safeClick(WindowsTestObject windowsObject) {
+		try {
+			Windows.click(windowsObject);
+		} catch (Exception error) {
+			Windows.switchToDesktop();
+			Windows.click(windowsObject);
+			Windows.switchToApplication();
+		}
+	}
 
 	def static cleanAllSessions() {
 		Map<String, Object> userConfigProperties = RunConfiguration.getDriverPreferencesProperties("Windows");
@@ -100,20 +110,20 @@ public class WindowsEnhancedKeyword {
 		String remoteAddressURLAsString = (String) userConfigProperties.getOrDefault(WIN_APP_DRIVER_PROPERTY,
 				WindowsDriverConstants.DEFAULT_WIN_APP_DRIVER_URL);
 	}
-	
+
 	def static dragAnDrop(WindowsTestObject sourceObject, WindowsTestObject targetObject) {
 		WebElement fromElement = Windows.findElement(sourceObject)
 		WebElement toElement = Windows.findElement(targetObject)
 
 		AppiumDriver<?> driver = Windows.getDriver()
-		
+
 		Actions action = new Actions(driver)
 		action.moveToElement(fromElement).clickAndHold().moveToElement(toElement).release().perform()
 	}
-	
+
 	def static dragAnDrop(WebElement fromElement, WebElement toElement) {
 		AppiumDriver<?> driver = Windows.getDriver()
-		
+
 		Actions action = new Actions(driver)
 		action.moveToElement(fromElement).clickAndHold().moveToElement(toElement).release().perform()
 	}

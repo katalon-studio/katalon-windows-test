@@ -18,4 +18,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-MainWindowKeyword.close()
+if (!GlobalVariable.G_runTestSuitesContinuously) {
+	MainWindowKeyword.close()
+}

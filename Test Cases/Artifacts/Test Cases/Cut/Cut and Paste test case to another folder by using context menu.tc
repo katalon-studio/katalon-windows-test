@@ -3,8 +3,7 @@
    <description></description>
    <name>Cut and Paste test case to another folder by using context menu</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for project to load
-2. Create a sample test case
+   <comment>2. Create a sample test case
 3. Create a sample folder
 4. Cut the sample test case by using context menu (Right click -> Cut)
 5. Paste the cut test case to the sample folder by using context menu (Right click -> Paste)

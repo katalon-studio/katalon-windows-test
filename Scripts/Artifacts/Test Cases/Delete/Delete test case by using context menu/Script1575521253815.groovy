@@ -39,7 +39,7 @@ import org.openqa.selenium.WebElement
 
 String newTestCaseName = NamingKeyword.generateTestCaseName()
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
 	Windows.startApplication(GlobalVariable.G_appPath)
 	ProjectsKeyword.waitForProjectLoad()
@@ -62,7 +62,7 @@ Windows.comment('5. Verify the created test case is closed')
 WebElement deletedTestCaseTab = MainContentKeyword.findTabItem(newTestCaseName)
 WindowsEnhancedKeyword.verifyElementNotPresent(deletedTestCaseTab, FailureHandling.STOP_ON_FAILURE)
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('6. Close Katalon Studio')
 	MainWindowKeyword.close()
 }

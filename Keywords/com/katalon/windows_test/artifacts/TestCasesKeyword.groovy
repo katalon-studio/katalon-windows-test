@@ -7,6 +7,7 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import com.katalon.windows_test.components.MenubarKeyword
 import com.katalon.windows_test.components.TestsExplorerKeyword
+import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
 import com.katalon.windows_test.util.NamingKeyword
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
@@ -49,7 +50,7 @@ public class TestCasesKeyword {
 
 	static void createTestCaseUsingFileMenu(String testCaseName, String testCaseDescription, String testCaseTag) {
 		MenubarKeyword.openNewMenu();
-		Windows.click(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New_TestCase'));
+		WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New_TestCase'));
 		inputTestCaseInfo(testCaseName, testCaseDescription, testCaseTag);
 	}
 

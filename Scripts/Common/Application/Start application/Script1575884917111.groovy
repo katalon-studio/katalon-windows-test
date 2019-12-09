@@ -18,4 +18,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-Windows.startApplication(GlobalVariable.G_appPath)
+if (!GlobalVariable.G_runTestSuitesContinuously) {
+	Windows.startApplication(GlobalVariable.G_appPath)
+}

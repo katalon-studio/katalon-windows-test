@@ -43,8 +43,10 @@ import org.openqa.selenium.WebElement
  */
 
 String newTestCaseName = NamingKeyword.generateTestCaseName()
+String newTestCaseDescription = NamingKeyword.generateTestCaseDescription()
+String newTestCaseTag = NamingKeyword.generateTestCaseTag()
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
 	Windows.startApplication(GlobalVariable.G_appPath)
 	ProjectsKeyword.waitForProjectLoad()
@@ -54,10 +56,12 @@ Windows.comment('2. Open `New` context menu on `Test Cases` folder')
 TestCasesKeyword.openNewContextMenu()
 
 Windows.comment('3. Select `Test Case`')
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Test_Case'))
+WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New_TestCase'))
 
 Windows.comment('4. Input test case info')
 Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Edit_Name'), newTestCaseName)
+Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Edit_Description'), newTestCaseDescription)
+Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Edit_Tag'), newTestCaseTag)
 Windows.click(findWindowsObject('Object Repository/Dialogs/New Test Case/Button_OK'))
 
 Windows.comment('5. Verify the created test case is existed under Test Cases folder')
@@ -71,7 +75,7 @@ WindowsEnhancedKeyword.verifyElementPresent(createdTestCaseTab, FailureHandling.
 Windows.comment('7. Delete the created test case')
 TestsExplorerKeyword.deleteTreeItem(createdTestCaseTreeItem)
 
-if (GlobalVariable.G_runSeparated) {
+if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('8. Close Katalon Studio')
 	MainWindowKeyword.close()
 }

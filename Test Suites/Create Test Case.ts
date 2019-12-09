@@ -29,13 +29,13 @@
       <testCaseId>Test Cases/Artifacts/Test Cases/Create/Create Test Case by using File menu</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>530f7cd6-4d00-4926-8728-6c3ee164864a</guid>
+      <guid>4e8cda24-4b9a-45d1-8376-deec9933e742</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Artifacts/Test Cases/Create/Create Test Case by using context menu</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a9f0b349-a251-41a7-b47e-a918c9f7f560</guid>
+      <guid>b9ca26ee-096a-4a6e-93ce-f317a9ec0d67</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Application/Close application</testCaseId>

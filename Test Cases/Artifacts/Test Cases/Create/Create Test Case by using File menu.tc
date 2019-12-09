@@ -3,8 +3,7 @@
    <description></description>
    <name>Create Test Case by using File menu</name>
    <tag></tag>
-   <comment>1. Open `Katalon Studio` and wait for project to load
-2. Open `New File` menu
+   <comment>2. Open `New File` menu
 3. Select `Test Case`
 4. Input test case info
 5. Verify the created test case is existed under Test Cases folder
