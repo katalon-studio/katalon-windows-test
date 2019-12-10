@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename test case using context menu</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Open rename dialog by using context menu (Right click -> Rename)
+4. Input new test case name
+5. Verify the sample test case tree item name is changed
+6. Verify the sample test case tab item name is changed
+7. Delete the sample test case</comment>
+   <testCaseGuid>5d5e1c90-a873-418c-a4e4-fe92db5721c8</testCaseGuid>
+</TestCaseEntity>

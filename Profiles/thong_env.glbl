@@ -26,7 +26,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>20</initValue>
+      <initValue>60</initValue>
       <name>G_longTimeout</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
+      <name>G_runTestCasesContinuously</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>G_runTestSuitesContinuously</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
