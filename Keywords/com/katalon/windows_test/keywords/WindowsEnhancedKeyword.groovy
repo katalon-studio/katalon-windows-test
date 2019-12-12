@@ -12,6 +12,7 @@ import com.kms.katalon.core.windows.constants.WindowsDriverConstants
 import com.kms.katalon.core.windows.driver.WindowsDriverFactory
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.windows.keyword.helper.WindowsActionHelper
+import org.openqa.selenium.WebElement
 
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.MobileBy
@@ -57,9 +58,54 @@ public class WindowsEnhancedKeyword {
 		}
 	}
 
-	def static pressKey(String keys) {
+	def static boolean verifyElementPresent(WebElement windowsElement, FailureHandling flowControl) {
+		boolean isPassed = windowsElement != null;
+		try {
+			assert isPassed == true;
+			KeywordUtil.markPassed('Element presents')
+			return isPassed;
+		} catch (Throwable e) {
+			if (flowControl == FailureHandling.OPTIONAL) {
+				KeywordUtil.markWarning("Element does not present")
+			} else if (flowControl == FailureHandling.CONTINUE_ON_FAILURE) {
+				KeywordUtil.markFailed("Element does not present")
+			} else {
+				KeywordUtil.markFailedAndStop("Element does not present")
+			}
+			return false;
+		}
+	}
+
+	def static boolean verifyElementNotPresent(WebElement windowsElement, FailureHandling flowControl) {
+		boolean isPassed = windowsElement == null;
+		try {
+			assert isPassed == true;
+			KeywordUtil.markPassed('Element does not present')
+			return isPassed;
+		} catch (Throwable e) {
+			if (flowControl == FailureHandling.OPTIONAL) {
+				KeywordUtil.markWarning("Element presents")
+			} else if (flowControl == FailureHandling.CONTINUE_ON_FAILURE) {
+				KeywordUtil.markFailed("Element presents")
+			} else {
+				KeywordUtil.markFailedAndStop("Element presents")
+			}
+		}
+	}
+
+	def static void pressKey(CharSequence keys) {
 		WindowsDriver driver = WindowsDriverFactory.getWindowsDriver()
 		driver.getKeyboard().pressKey(keys)
+	}
+	
+	def static void safeClick(WindowsTestObject windowsObject) {
+		try {
+			Windows.click(windowsObject);
+		} catch (Exception error) {
+			Windows.switchToDesktop();
+			Windows.click(windowsObject);
+			Windows.switchToApplication();
+		}
 	}
 
 	def static cleanAllSessions() {
@@ -76,6 +122,13 @@ public class WindowsEnhancedKeyword {
 		WebElement fromElement = Windows.findElement(sourceObject)
 		WebElement toElement = Windows.findElement(targetObject)
 
+		AppiumDriver<?> driver = Windows.getDriver()
+
+		Actions action = new Actions(driver)
+		action.moveToElement(fromElement).clickAndHold().moveToElement(toElement).release().perform()
+	}
+
+	def static dragAnDrop(WebElement fromElement, WebElement toElement) {
 		AppiumDriver<?> driver = Windows.getDriver()
 
 		Actions action = new Actions(driver)

@@ -3,7 +3,7 @@
    <description></description>
    <name>MenuItem_New</name>
    <tag></tag>
-   <locator>/Window/Menu[@Name=&quot;File&quot;]/MenuItem[@Name=&quot;New&quot;]</locator>
+   <locator>//Window/Menu[@Name=&quot;File&quot;]/MenuItem[@Name=&quot;New&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>

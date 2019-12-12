@@ -10,7 +10,7 @@ Windows.startApplication(GlobalVariable.G_appPath)
 
 Windows.delay(GlobalVariable.G_longTimeout)
 
-Windows.sendKeys(findWindowsObject("Object Repository/MenuBar/File"), Keys.chord(Keys.CONTROL + "O"))
+Windows.sendKeys(findWindowsObject("Object Repository/MenuBar/File/MenuItem_File"), Keys.chord(Keys.CONTROL + "O"))
 
 Windows.clearText(findWindowsObject("Object Repository/Windows/Browser For Folder/Edit_Folder_Path"))
 

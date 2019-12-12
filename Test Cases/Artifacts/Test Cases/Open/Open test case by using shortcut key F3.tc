@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Open test case by using shortcut key F3</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Close the sample test case
+4. Check for sure that the sample test case is really closed
+5. Open the sample test case by using shortcut key [F3]
+6. Verify the sample test case is opened
+7. Delete the sample test case</comment>
+   <testCaseGuid>3e2eb362-e347-43f9-850a-e82ce306f98f</testCaseGuid>
+</TestCaseEntity>
