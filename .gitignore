@@ -16,3 +16,5 @@ build
 .project
 
 .settings
+
+.DS_Store
