@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>Button_Add</name>
+   <tag></tag>
+   <locator>//Pane[@Name=&quot;New Test Object&quot;]//Button[@Name=&quot;Add&quot;]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>

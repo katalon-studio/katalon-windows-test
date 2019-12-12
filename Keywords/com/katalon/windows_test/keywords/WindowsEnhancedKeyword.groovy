@@ -1,5 +1,6 @@
 package com.katalon.windows_test.keywords
 
+import org.openqa.selenium.Dimension
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.interactions.Actions
 
@@ -14,7 +15,9 @@ import com.kms.katalon.core.windows.keyword.helper.WindowsActionHelper
 import org.openqa.selenium.WebElement
 
 import io.appium.java_client.AppiumDriver
+import io.appium.java_client.MobileBy
 import io.appium.java_client.windows.WindowsDriver
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 public class WindowsEnhancedKeyword {
 	public static final String DESIRED_CAPABILITIES_PROPERTY = "desiredCapabilities";
@@ -25,6 +28,7 @@ public class WindowsEnhancedKeyword {
 		try {
 			assert WindowsActionHelper.create(WindowsDriverFactory.getWindowsSession()).findElements(windowsObject).size() > 0
 			KeywordUtil.markPassed('Element presents')
+			return true
 		} catch (Throwable e) {
 			if (flowControl == FailureHandling.OPTIONAL) {
 				KeywordUtil.markWarning("Element does not present")
@@ -33,6 +37,7 @@ public class WindowsEnhancedKeyword {
 			} else {
 				KeywordUtil.markFailedAndStop("Element does not present")
 			}
+			return false
 		}
 	}
 
@@ -40,6 +45,7 @@ public class WindowsEnhancedKeyword {
 		try {
 			assert WindowsActionHelper.create(WindowsDriverFactory.getWindowsSession()).findElements(windowsObject).size() == 0
 			KeywordUtil.markPassed('Element does not present')
+			return true
 		} catch (Throwable e) {
 			if (flowControl == FailureHandling.OPTIONAL) {
 				KeywordUtil.markWarning("Element presents")
@@ -48,6 +54,7 @@ public class WindowsEnhancedKeyword {
 			} else {
 				KeywordUtil.markFailedAndStop("Element presents")
 			}
+			return false
 		}
 	}
 
@@ -126,5 +133,34 @@ public class WindowsEnhancedKeyword {
 
 		Actions action = new Actions(driver)
 		action.moveToElement(fromElement).clickAndHold().moveToElement(toElement).release().perform()
+	}
+
+	def static scroll(WindowsTestObject scrollObject, int value) {
+		WebElement scrollBarElement = Windows.findElement(scrollObject)
+		int max = Integer.parseInt(scrollBarElement.getAttribute("RangeValue.Maximum"))
+		int currentValue = Integer.parseInt(scrollBarElement.getAttribute("RangeValue.Value"))
+		Dimension scrollBarRect = scrollBarElement.getSize()
+		WebElement upButtonElement = Windows.getDriver().findElementByAccessibilityId("UpButton")
+		Dimension upButtonRect = upButtonElement.getSize()
+		int start = scrollBarElement.getLocation().getY() + upButtonRect.getHeight()
+		int end = scrollBarElement.getLocation().getY() + scrollBarRect.getHeight() - upButtonRect.getHeight()
+
+		WebElement thumbElement = Windows.findElement(findWindowsObject("Object Repository/Windows/ScrollBar/Thumb"))
+		int targetThumbY = (value - currentValue) * (end - start) / 100 / 2
+
+		Actions action = new Actions(Windows.getDriver())
+		action.moveToElement(thumbElement).clickAndHold().moveByOffset(0, targetThumbY).release().perform()
+	}
+	
+	def static void clickOffset(WindowsTestObject windowsObject, int x, int y) {
+		WebElement element = Windows.findElement(windowsObject)
+		
+		Actions action = new Actions(Windows.getDriver())
+		action.moveToElement(element, x, y).click().release().perform()
+	}
+	
+	def static void clickElementOffset(WebElement element, int x, int y) {
+		Actions action = new Actions(Windows.getDriver())
+		action.moveToElement(element, x, y).click().perform()
 	}
 }

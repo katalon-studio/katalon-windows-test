@@ -1,37 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>Window</name>
+   <name>Button_Browse_Image</name>
    <tag></tag>
-   <locator>Katalon Studio - 7.0.1-35bc6144 - TestExternalDB - [Location: C:\Users\katalon-test\Katalon Studio\TestExternalDB]</locator>
-   <locatorStrategy>NAME</locatorStrategy>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>CanMinimize</name>
-      <type>Main</type>
-      <value>True</value>
-   </properties>
+   <locator>//Edit[@Name=&quot;Image&quot;]/following-sibling::Button</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ItemStatus</name>
       <type>Main</type>
       <value></value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>CanRotate</name>
-      <type>Main</type>
-      <value>False</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>WindowVisualState</name>
-      <type>Main</type>
-      <value>Maximized</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -45,28 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>Katalon Studio - 7.0.1-35bc6144 - TestExternalDB - [Location: C:\Users\katalon-test\Katalon Studio\TestExternalDB]</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>CanMaximize</name>
-      <type>Main</type>
-      <value>True</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>IsTopmost</name>
-      <type>Main</type>
-      <value>False</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>IsModal</name>
-      <type>Main</type>
-      <value>False</value>
+      <value>Browse...</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -80,14 +38,14 @@
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value>SWT_Window0</value>
+      <value>Button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>FrameworkId</name>
       <type>Main</type>
-      <value>SWT</value>
+      <value>Win32</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -95,13 +53,6 @@
       <name>AccessKey</name>
       <type>Main</type>
       <value></value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>CanMove</name>
-      <type>Main</type>
-      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +66,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.1316956</value>
+      <value>42.22028450</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -127,16 +78,9 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>CanResize</name>
-      <type>Main</type>
-      <value>False</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>728</value>
+      <value>25</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -150,7 +94,7 @@
       <matchCondition>equals</matchCondition>
       <name>HasKeyboardFocus</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -158,13 +102,6 @@
       <name>IsRequiredForForm</name>
       <type>Main</type>
       <value>False</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>WindowInteractionState</name>
-      <type>Main</type>
-      <value>ReadyForUserInteraction</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -178,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value></value>
+      <value>22028450</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -199,42 +136,35 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>window</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>IsAvailable</name>
-      <type>Main</type>
-      <value>True</value>
+      <value>button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>1366</value>
+      <value>59</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>0</value>
+      <value>1211</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>0</value>
+      <value>167</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>26292</value>
+      <value>7024</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
