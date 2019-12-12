@@ -48,20 +48,18 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Create a sample folder')
-TestCasesKeyword.createFolderUsingFileMenu(sampleFolderName)
+TestCasesKeyword.createFolder(sampleFolderName)
 
 Windows.comment('4. Copy the created test case by using shortcut key [Ctrl + C]')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
-sampleTestCase.click()
-WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL, 'c'))
+sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'c'))
 
 Windows.comment('5. Paste the copied test case to the sample folder by using shortcut key [Ctrl + V]')
 WebElement sampleFolder = TestsExplorerKeyword.findTreeItem(sampleFolderName)
-sampleFolder.click()
-WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL, 'v'))
+sampleFolder.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
 
 Windows.comment('6. Verify the cloned test case is appeared under the sample folder')
 WebElement clonedTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, sampleFolderName)

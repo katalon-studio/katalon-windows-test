@@ -90,7 +90,17 @@ public class WindowsEnhancedKeyword {
 		WindowsDriver driver = WindowsDriverFactory.getWindowsDriver()
 		driver.getKeyboard().pressKey(keys)
 	}
-	
+
+	def static void releaseKey(CharSequence keys) {
+		WindowsDriver driver = WindowsDriverFactory.getWindowsDriver()
+		driver.getKeyboard().releaseKey(keys)
+	}
+
+	def static void sendKeys(CharSequence keys) {
+		WindowsDriver driver = WindowsDriverFactory.getWindowsDriver()
+		driver.getKeyboard().sendKeys(keys)
+	}
+
 	def static void safeClick(WindowsTestObject windowsObject) {
 		try {
 			Windows.click(windowsObject);

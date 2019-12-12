@@ -47,12 +47,12 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Show References by using shortcut key [Ctrl + R]')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
 sampleTestCase.click()
-WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL, 'r'))
+sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'r'))
 
 Windows.comment('4. Verify test case references are listed under Search tab')
 String searchTabXPath = String.format('//Tab[@Name="Search"]/TabItem[@Name="Search"]')

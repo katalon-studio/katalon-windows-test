@@ -43,7 +43,7 @@ public class MainContentKeyword {
 	static void closeTabItem(String tabItemName, FailureHandling flowControl) {
 		WebElement tabItem = findTabItem(tabItemName)
 		WindowsEnhancedKeyword.verifyElementPresent(tabItem, flowControl)
-		WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL, 'w'))
+		WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.CONTROL, 'w'))
 	}
 
 	static WebElement findViewTab(String viewTabName) {

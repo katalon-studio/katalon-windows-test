@@ -30,41 +30,48 @@ import org.openqa.selenium.WebElement
 public class TestCasesKeyword {
 	static final String ROOT_TEST_CASES_FOLDER_NAME = "Test Cases";
 
-	static WebElement createTestCase() {
-		return createTestCase(NamingKeyword.generateTestCaseName());
+	static void createTestCase(String name) {
+		createTestCase(name, '');
 	}
 
-	static void createTestCaseUsingContextMenu(String testCaseName) {
-		TestsExplorerKeyword.openNewContextMenu(ROOT_TEST_CASES_FOLDER_NAME);
-		Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Test_Case'));
-		inputTestCaseInfo(testCaseName);
+	static void createTestCase(String name, String description) {
+		createTestCase(name, description, '');
 	}
 
-	static void createTestCaseUsingFileMenu(String testCaseName) {
-		createTestCaseUsingFileMenu(testCaseName, '');
+	static void createTestCase(String name, String description, String tag) {
+		createTestCaseUsingAcceleratorKeys(name, description, tag);
 	}
 
-	static void createTestCaseUsingFileMenu(String testCaseName, String testCaseDescription) {
-		createTestCaseUsingFileMenu(testCaseName, testCaseDescription, '');
+	static void createTestCaseUsingAcceleratorKeys(String testCaseName) {
+		createTestCaseUsingAcceleratorKeys(testCaseName, '');
 	}
 
-	static void createTestCaseUsingFileMenu(String testCaseName, String testCaseDescription, String testCaseTag) {
-		MenubarKeyword.openNewMenu();
-		WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New_TestCase'));
-		inputTestCaseInfo(testCaseName, testCaseDescription, testCaseTag);
+	static void createTestCaseUsingAcceleratorKeys(String name, String description) {
+		createTestCaseUsingAcceleratorKeys(name, description, '');
 	}
 
-	static void inputTestCaseInfo(String testCaseName) {
-		inputTestCaseInfo(testCaseName, '');
+	static void createTestCaseUsingAcceleratorKeys(String name, String description, String tag) {
+		TestsExplorerKeyword.focusToTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
+		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
+		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
+		WindowsEnhancedKeyword.sendKeys('f');
+		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		WindowsEnhancedKeyword.sendKeys('t');
+		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		inputTestCaseInfo(name, description, tag);
 	}
 
-	static void inputTestCaseInfo(String testCaseName, String description) {
-		inputTestCaseInfo(testCaseName, description, '');
+	static void inputTestCaseInfo(String name) {
+		inputTestCaseInfo(name, '');
 	}
 
-	static void inputTestCaseInfo(String testCaseName, String description, String tag) {
-		if (!StringUtils.isBlank(testCaseName)) {
-			Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Edit_Name'), testCaseName);
+	static void inputTestCaseInfo(String name, String description) {
+		inputTestCaseInfo(name, description, '');
+	}
+
+	static void inputTestCaseInfo(String name, String description, String tag) {
+		if (!StringUtils.isBlank(name)) {
+			Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Edit_Name'), name);
 		}
 		if (!StringUtils.isBlank(description)) {
 			Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Edit_Description'), description);
@@ -75,47 +82,30 @@ public class TestCasesKeyword {
 		Windows.click(findWindowsObject('Object Repository/Dialogs/New Test Case/Button_OK'));
 	}
 
-	static void createFolderUsingFileMenu(String folderName) {
-		createFolderUsingFileMenu(folderName, '');
+	static void createFolder(String name) {
+		createFolder(name, '');
 	}
 
-	static void createFolderUsingFileMenu(String folderName, String parentFolderName) {
-		if (!StringUtils.isBlank(parentFolderName)) {
-			TestsExplorerKeyword.focusToTreeItem(parentFolderName);
-		} else {
-			TestsExplorerKeyword.focusToTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
-		}
-		TestsExplorerKeyword.createFolderAtFocusedFolder(folderName);
+	static void createFolder(String name, String parentFolderName) {
+		createFolderUsingAcceleratorKeys(name, parentFolderName);
 	}
 
-	static void createFolderUsingContextMenu(String folderName) {
-		createFolderUsingContextMenu(folderName, '');
+	static void createFolderUsingAcceleratorKeys(String name) {
+		createFolderUsingAcceleratorKeys(name, '');
 	}
 
-	static void createFolderUsingContextMenu(String folderName, String parentFolderName) {
+	static void createFolderUsingAcceleratorKeys(String name, String parentFolderName) {
 		if (StringUtils.isBlank(parentFolderName)) {
 			parentFolderName = ROOT_TEST_CASES_FOLDER_NAME;
 		}
-		TestsExplorerKeyword.createFolderUsingContextMenu(folderName, parentFolderName);
+		TestsExplorerKeyword.createFolderUsingAcceleratorKeys(name, parentFolderName);
+	}
+
+	static void openContextMenu() {
+		TestsExplorerKeyword.openContextMenuAtTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
 	}
 
 	static void openNewContextMenu() {
 		TestsExplorerKeyword.openNewContextMenu(ROOT_TEST_CASES_FOLDER_NAME);
-	}
-
-	static moveTestCase(String testCaseName, String targetFolderName, boolean createFolderIfNotExist) {
-		WebElement targetFolder = null;
-		if (!StringUtils.isBlank(targetFolderName)) {
-			String folderXPath = String.format('//Pane[@Name="Tests Explorer"]//TreeItem[@Name="%s"]', targetFolderName);
-			targetFolder = Windows.getDriver().findElementByXPath(folderXPath);
-
-			if (targetFolder == null && createFolderIfNotExist) {
-			}
-		}
-
-		if (targetFolder != null) {
-			targetFolder.click();
-			Windows.sendKeys(targetFolder, Keys.chord(Keys.CONTROL, 'v'))
-		}
 	}
 }

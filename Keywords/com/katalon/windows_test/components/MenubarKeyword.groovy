@@ -6,6 +6,8 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
+import org.openqa.selenium.Keys
+
 import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
@@ -23,9 +25,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class MenubarKeyword {
+	static void openFileMenu() {
+		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
+		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
+		WindowsEnhancedKeyword.sendKeys('f');
+	}
 
 	static void openNewMenu() {
-		Windows.click(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File'));
-		WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New'));
+		openFileMenu();
+		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
 	}
 }

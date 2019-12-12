@@ -49,7 +49,7 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Close the sample test case')
 MainContentKeyword.closeTabItem(sampleTestCaseName)
@@ -60,8 +60,7 @@ WindowsEnhancedKeyword.verifyElementNotPresent(sampleTestCaseTab, FailureHandlin
 
 Windows.comment('5. Open the sample test case by using shortcut key [Enter]')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
-sampleTestCase.click()
-WindowsEnhancedKeyword.pressKey(Keys.ENTER)
+sampleTestCase.sendKeys(Keys.ENTER)
 
 Windows.comment('6. Verify the sample test case is opened')
 sampleTestCaseTab = MainContentKeyword.findTabItem(sampleTestCaseName)

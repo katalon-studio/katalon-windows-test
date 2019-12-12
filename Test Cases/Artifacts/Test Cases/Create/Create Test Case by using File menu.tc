@@ -3,11 +3,17 @@
    <description></description>
    <name>Create Test Case by using File menu</name>
    <tag></tag>
-   <comment>2. Open `New File` menu
-3. Select `Test Case`
-4. Input test case info
-5. Verify the created test case is existed under Test Cases folder
-6. Verify the created test case is opened
-7. Delete the created test case</comment>
-   <testCaseGuid>178a4cb0-7dd2-4d89-b89f-fc6efc3041f2</testCaseGuid>
+   <comment>2. Open `New Test Case` dialog by using access keys (Alt -> F -> Enter -> T -> Enter)
+3. Input test case info
+4. Verify the created test case is existed under Test Cases folder
+5. Verify the created test case is opened
+6. Delete the created test case</comment>
+   <testCaseGuid>ccdf9b86-b622-4d05-aea3-5d1c00c8aa40</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f4cd33dc-137e-4168-912a-44cf391b77b9</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
 </TestCaseEntity>
