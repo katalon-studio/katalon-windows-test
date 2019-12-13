@@ -49,7 +49,7 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case with full properties')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName, sampleTestCaseDescription, sampleTestCaseTag)
+TestCasesKeyword.createTestCase(sampleTestCaseName, sampleTestCaseDescription, sampleTestCaseTag)
 MainContentKeyword.closeTabItem(sampleTestCaseName)
 TestsExplorerKeyword.openTreeItem(sampleTestCaseName)
 

@@ -27,18 +27,18 @@ import org.openqa.selenium.NoSuchElementException
 
 public class TestsExplorerKeyword {
 	public static final String TESTS_EXPLORER_NAME = "Tests Explorer";
-	
+
 	static WebElement findTreeItem(String treeItemName) {
 		return findTreeItem(treeItemName, '');
 	}
 
-	static WebElement findTreeItem(String treeItemName, String parentFolder) {
+	static WebElement findTreeItem(String treeItemName, String parentFolderName) {
 		try {
 			String treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]',
 					TESTS_EXPLORER_NAME, treeItemName);
-			if (!StringUtils.isEmpty(parentFolder)) {
+			if (!StringUtils.isEmpty(parentFolderName)) {
 				treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]/TreeItem[@Name="%s"]',
-					TESTS_EXPLORER_NAME, parentFolder, treeItemName);
+						TESTS_EXPLORER_NAME, parentFolderName, treeItemName);
 			}
 			return Windows.getDriver().findElementByXPath(treeItemXPath);
 		} catch (NoSuchElementException error) {
@@ -47,21 +47,33 @@ public class TestsExplorerKeyword {
 	}
 
 	static WebElement focusToTreeItem(String treeItemName) {
-		WebElement treeItem = findTreeItem(treeItemName);
+		return focusToTreeItem(treeItemName, '');
+	}
+
+	static WebElement focusToTreeItem(String treeItemName, String parentFolderName) {
+		WebElement treeItem = findTreeItem(treeItemName, parentFolderName);
 		if (treeItem != null) {
 			treeItem.click();
 		}
 		return treeItem;
 	}
-	
+
 	static WebElement openTreeItem(String treeItemName) {
-		WebElement treeItem = findTreeItem(treeItemName);
+		return openTreeItem(treeItemName, '');
+	}
+
+	static WebElement openTreeItem(String treeItemName, String parentFolderName) {
+		WebElement treeItem = findTreeItem(treeItemName, parentFolderName);
 		treeItem.sendKeys(Keys.ENTER);
 		return treeItem;
 	}
 
 	static void deleteTreeItem(String treeItemName) {
-		WebElement treeItem = findTreeItem(treeItemName);
+		deleteTreeItem(treeItemName, '');
+	}
+
+	static void deleteTreeItem(String treeItemName, String parentFolderName) {
+		WebElement treeItem = findTreeItem(treeItemName, parentFolderName);
 		if (treeItem != null) {
 			deleteTreeItem(treeItem)
 		}
@@ -72,28 +84,31 @@ public class TestsExplorerKeyword {
 			return;
 		}
 		treeItem.click();
-		WindowsEnhancedKeyword.pressKey(Keys.DELETE);
-		WindowsEnhancedKeyword.pressKey(Keys.ENTER);
+		WindowsEnhancedKeyword.sendKeys(Keys.DELETE);
+		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
 	}
 
-	static void createFolderAtFocusedFolder(String folderName) {
-		MenubarKeyword.openNewMenu();
-		WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File_New_Folder'));
+	static void createFolderUsingAcceleratorKeys(String folderName) {
+		createFolderUsingAcceleratorKeys(folderName, '');
+	}
+
+	static void createFolderUsingAcceleratorKeys(String folderName, String parentFolderName) {
+		if (!StringUtils.isBlank(parentFolderName)) {
+			focusToTreeItem(parentFolderName);
+		}
+		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
+		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
+		WindowsEnhancedKeyword.sendKeys('f');
+		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		WindowsEnhancedKeyword.sendKeys('f');
+		inputFolderInfo(folderName);
+	}
+
+	static void inputFolderInfo(String folderName) {
 		Windows.setText(findWindowsObject('Object Repository/Dialogs/New Folder/Edit_Name'), folderName);
 		Windows.click(findWindowsObject('Object Repository/Dialogs/New Folder/Button_OK'));
 	}
 
-	static void createFolderUsingContextMenu(String folderName, String parentFolderName) {
-		openNewContextMenu(parentFolderName);
-		WindowsEnhancedKeyword.safeClick(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Folder'));
-		Windows.setText(findWindowsObject('Object Repository/Dialogs/New Folder/Edit_Name'), folderName);
-		Windows.click(findWindowsObject('Object Repository/Dialogs/New Folder/Button_OK'));
-	}
-
-	/**
-	 * * This method will switch to Desktop context. Use `Windows.switchToApplication()` to switch back.
-	 * @param treeItemName
-	 */
 	static void openContextMenuAtTreeItem(String treeItemName) {
 		if (StringUtils.isBlank(treeItemName)) {
 			return;
@@ -101,7 +116,6 @@ public class TestsExplorerKeyword {
 		WebElement treeItem = findTreeItem(treeItemName);
 		Actions action = new Actions(Windows.getDriver());
 		action.contextClick(treeItem).build().perform();
-		Windows.switchToDesktop();
 	}
 
 	static void openNewContextMenu(String treeItemName) {
@@ -109,7 +123,6 @@ public class TestsExplorerKeyword {
 			return;
 		}
 		openContextMenuAtTreeItem(treeItemName);
-		Windows.click(findWindowsObject("Object Repository/Tests Explorer/Menu/MenuItem_New"));
-		Windows.switchToApplication();
+		WindowsEnhancedKeyword.sendKeys('n');
 	}
 }

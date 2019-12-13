@@ -21,6 +21,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+
+import org.openqa.selenium.Keys
 import org.openqa.selenium.WebElement
 
 
@@ -44,12 +46,11 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Show References by using context menu (Right click -> Show References)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_ShowReferences'), FailureHandling.STOP_ON_FAILURE)
-Windows.switchToApplication()
+WindowsEnhancedKeyword.sendKeys('s')
 
 Windows.comment('4. Verify test case references are listed under Search tab')
 String searchTabXPath = String.format('//Tab[@Name="Search"]/TabItem[@Name="Search"]')

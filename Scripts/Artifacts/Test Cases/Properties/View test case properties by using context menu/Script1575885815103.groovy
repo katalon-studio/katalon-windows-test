@@ -4,6 +4,7 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
+import org.openqa.selenium.Keys
 import org.openqa.selenium.WebElement
 
 import com.katalon.windows_test.artifacts.ProjectsKeyword
@@ -49,12 +50,11 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case with full properties')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName, sampleTestCaseDescription, sampleTestCaseTag)
+TestCasesKeyword.createTestCase(sampleTestCaseName, sampleTestCaseDescription, sampleTestCaseTag)
 
 Windows.comment('3. View sample test case properties by using context menu (Right click -> Properties)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Properties'))
-Windows.switchToApplication()
+WindowsEnhancedKeyword.sendKeys('p')
 
 Windows.comment('4. Verify all sample test case properties are presented and correct')
 String id = Windows.getText(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_ID'))

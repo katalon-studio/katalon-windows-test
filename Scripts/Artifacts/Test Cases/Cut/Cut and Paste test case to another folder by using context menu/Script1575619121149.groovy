@@ -49,20 +49,20 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Create a sample folder')
-TestCasesKeyword.createFolderUsingFileMenu(sampleFolderName)
+TestCasesKeyword.createFolder(sampleFolderName)
 
 Windows.comment('4. Cut the sample test case by using context menu (Right click -> Cut)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Cut'))
-Windows.switchToApplication()
+WindowsEnhancedKeyword.sendKeys('ccc')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
 Windows.comment('5. Paste the cut test case to the sample folder by using context menu (Right click -> Paste)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleFolderName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Paste'))
-Windows.switchToApplication()
+WindowsEnhancedKeyword.sendKeys('p')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
 Windows.comment('6. Verify the sample test case is disappeared from the original folder')
 WebElement originalTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, TestsExplorerKeyword.TESTS_EXPLORER_NAME)

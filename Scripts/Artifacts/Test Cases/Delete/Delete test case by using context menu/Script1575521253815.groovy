@@ -31,9 +31,9 @@ import org.openqa.selenium.WebElement
  *
  * 1. Open `Katalon Studio` and wait for project to load
  * 2. Create a sample test case
- * 3. Delete the created test case by using context menu
- * 4. Verify the test case is removed from test cases tree
- * 5. Verify the test case is closed
+ * 3. Delete the sample test case by using context menu
+ * 4. Verify the sample test case is removed from test cases tree
+ * 5. Verify the sample test case is closed
  * 6. Close Katalon Studio
  */
 
@@ -46,19 +46,18 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(newTestCaseName)
+TestCasesKeyword.createTestCase(newTestCaseName)
 
-Windows.comment('3. Delete the created test case by using context menu')
+Windows.comment('3. Delete the sample test case by using context menu')
 TestsExplorerKeyword.openContextMenuAtTreeItem(newTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Delete'))
-Windows.switchToApplication()
-Windows.click(findWindowsObject('Object Repository/Dialogs/Delete Test Case/Button_Yes'))
+WindowsEnhancedKeyword.sendKeys('d')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
-Windows.comment('4. Verify the created test case is deleted')
+Windows.comment('4. Verify the sample test case is deleted')
 WebElement deletedTestCaseTreeItem = TestsExplorerKeyword.findTreeItem(newTestCaseName)
 WindowsEnhancedKeyword.verifyElementNotPresent(deletedTestCaseTreeItem, FailureHandling.STOP_ON_FAILURE)
 
-Windows.comment('5. Verify the created test case is closed')
+Windows.comment('5. Verify the sample test case is closed')
 WebElement deletedTestCaseTab = MainContentKeyword.findTabItem(newTestCaseName)
 WindowsEnhancedKeyword.verifyElementNotPresent(deletedTestCaseTab, FailureHandling.STOP_ON_FAILURE)
 

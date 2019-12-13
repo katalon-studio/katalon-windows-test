@@ -48,14 +48,15 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Cut the sample test case by using shortcut key [Ctrl + X]')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
 sampleTestCase.click()
-WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL, 'x'))
+sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'x'))
 
 Windows.comment('4. Paste the cut test case at the same folder by using shortcut key [Ctrl + V]')
+sampleTestCase.click()
 WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL, 'v'))
 
 Windows.comment('5. Verify the test case is appeared')

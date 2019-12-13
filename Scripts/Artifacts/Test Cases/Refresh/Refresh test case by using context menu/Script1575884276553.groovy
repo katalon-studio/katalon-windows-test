@@ -45,12 +45,12 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Refresh the sample test case by using context menu')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Refresh'))
-Windows.switchToApplication()
+WindowsEnhancedKeyword.sendKeys('rr')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
 Windows.comment('4. Delete the sample test case')
 TestsExplorerKeyword.deleteTreeItem(sampleTestCaseName)

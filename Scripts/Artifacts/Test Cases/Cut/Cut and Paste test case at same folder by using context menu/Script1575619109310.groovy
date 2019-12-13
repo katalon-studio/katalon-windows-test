@@ -48,17 +48,17 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Cut the sample test case by using context menu (Right click -> Cut)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Cut'))
-Windows.switchToApplication()
+WindowsEnhancedKeyword.sendKeys('ccc')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
 Windows.comment('4. Paste the cut test case at the same folder by using context menu (Right click -> Paste)')
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
-Windows.click(findWindowsObject('Object Repository/Tests Explorer/Menu/MenuItem_Paste'))
-Windows.switchToApplication()
+WindowsEnhancedKeyword.sendKeys('p')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
 Windows.comment('5. Verify the test case is appeared')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)

@@ -27,9 +27,12 @@ public class MainWindowKeyword {
 
 	static close() {
 		Windows.sleep(1000L);
-		WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.ALT, Keys.F4));
-		WindowsEnhancedKeyword.pressKey(Keys.ENTER);
-//		Windows.click(findWindowsObject('Object Repository/Main Window/Button_Close'));
-//		Windows.click(findWindowsObject('Object Repository/Main Window/Button_OK'));
+		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
+		WindowsEnhancedKeyword.releaseKey(Keys.F4);
+		WindowsEnhancedKeyword.releaseKey(Keys.ENTER);
+		WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.ALT, Keys.F4));
+		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		//		Windows.click(findWindowsObject('Object Repository/Main Window/Button_Close'));
+		//		Windows.click(findWindowsObject('Object Repository/Main Window/Button_OK'));
 	}
 }

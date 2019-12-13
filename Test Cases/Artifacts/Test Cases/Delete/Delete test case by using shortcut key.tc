@@ -4,8 +4,8 @@
    <name>Delete test case by using shortcut key</name>
    <tag></tag>
    <comment>2. Create a sample test case
-3. Delete the created test case by shortcut key [Delete] -> [Enter]
-4. Verify the created test case is deleted
-5. Verify the created test case is closed</comment>
+3. Delete the sample test case by shortcut key [Delete] -> [Enter]
+4. Verify the sample test case is deleted
+5. Verify the sample test case is closed</comment>
    <testCaseGuid>1cd10d80-c511-43a5-8b85-16a25f41e89a</testCaseGuid>
 </TestCaseEntity>

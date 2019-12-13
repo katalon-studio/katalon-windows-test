@@ -45,12 +45,11 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Refresh the sample test case by using shortcut key [F5]')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
-sampleTestCase.click()
-WindowsEnhancedKeyword.pressKey(Keys.F5)
+sampleTestCase.sendKeys(Keys.F5)
 
 Windows.comment('4. Delete the sample test case')
 TestsExplorerKeyword.deleteTreeItem(sampleTestCaseName)

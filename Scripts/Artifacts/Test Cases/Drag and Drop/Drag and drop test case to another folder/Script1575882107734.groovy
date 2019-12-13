@@ -49,10 +49,10 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 }
 
 Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCaseUsingFileMenu(sampleTestCaseName)
+TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Create a sample folder')
-TestCasesKeyword.createFolderUsingFileMenu(sampleFolderName)
+TestCasesKeyword.createFolder(sampleFolderName)
 
 Windows.comment('4. Drag and drop the sample test case to the sample folder')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)

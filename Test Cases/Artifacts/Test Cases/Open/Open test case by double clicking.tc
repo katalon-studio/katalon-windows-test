@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Open test case by double clicking</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Close the sample test case
+4. Check for sure that the sample test case is really closed
+5. Open the sample test case by double clicking
+6. Verify the sample test case is opened
+7. Delete the sample test case</comment>
+   <testCaseGuid>424b78fd-cc7e-45c0-b458-506dc65d4995</testCaseGuid>
+</TestCaseEntity>
