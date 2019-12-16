@@ -3,8 +3,8 @@
    <description></description>
    <name>Create Test Case by using context menu</name>
    <tag></tag>
-   <comment>2. Open `New` context menu on `Test Cases` folder
-3. Select `Test Case`
+   <comment>2. Open `New` context menu at `Test Cases` folder
+3. Select `Test Case` by using accelerator key `T``
 4. Input test case info
 5. Verify the created test case is existed under Test Cases folder
 6. Verify the created test case is opened

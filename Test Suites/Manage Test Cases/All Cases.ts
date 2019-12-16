@@ -143,12 +143,6 @@
       <testCaseId>Test Cases/Artifacts/Test Cases/Open/Open test case by using shortcut key F3</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>03daeea7-295c-40a3-87d3-1fa34db7d11b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Artifacts/Test Cases/Rename/Rename test case by using shortcut key</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>229a0860-11f5-4f4a-8b98-6963ffceb741</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -175,7 +169,7 @@
    <testCaseLink>
       <guid>1de87b22-d570-4ced-b9eb-d251ae87d1ce</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Artifacts/Test Cases/References/Show references by using shortcut key</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -195,6 +189,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Artifacts/Test Cases/Rename/Rename test case by using context menu</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>03daeea7-295c-40a3-87d3-1fa34db7d11b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Artifacts/Test Cases/Rename/Rename test case by using shortcut key</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>56b1b81a-b2fb-42fb-84d5-13d3c4425881</guid>

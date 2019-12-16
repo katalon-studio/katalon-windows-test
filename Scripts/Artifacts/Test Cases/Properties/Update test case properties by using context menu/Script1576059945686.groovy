@@ -60,7 +60,9 @@ TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.sendKeys('p')
 
 Windows.comment('4. Change the sample test case properties')
-Windows.clearText(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_Description'))
+Windows.click(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_Description'))
+WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.CONTROL, 'a'))
+WindowsEnhancedKeyword.sendKeys(Keys.DELETE)
 Windows.setText(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_Description'), newTestCaseDescription)
 //
 Windows.clearText(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_Tag'))

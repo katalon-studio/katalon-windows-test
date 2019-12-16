@@ -3,7 +3,7 @@
    <description></description>
    <name>Edit_Description</name>
    <tag></tag>
-   <locator>//Window[@Name=&quot;Test Case Properties&quot;]/Pane//Edit[@Name=&quot;Description&quot;]</locator>
+   <locator>//Window[@Name=&quot;Test Case Properties&quot;]/Pane//*[(self::Edit or self::Document) and @Name=&quot;Description&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>

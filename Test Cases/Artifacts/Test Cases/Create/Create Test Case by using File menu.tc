@@ -3,7 +3,7 @@
    <description></description>
    <name>Create Test Case by using File menu</name>
    <tag></tag>
-   <comment>2. Open `New Test Case` dialog by using access keys (Alt -> F -> Enter -> T -> Enter)
+   <comment>2. Open `New Test Case` dialog by using File menu
 3. Input test case info
 4. Verify the created test case is existed under Test Cases folder
 5. Verify the created test case is opened
