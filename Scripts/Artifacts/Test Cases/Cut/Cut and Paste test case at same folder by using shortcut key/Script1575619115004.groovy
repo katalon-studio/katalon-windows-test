@@ -52,12 +52,10 @@ TestCasesKeyword.createTestCase(sampleTestCaseName)
 
 Windows.comment('3. Cut the sample test case by using shortcut key [Ctrl + X]')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
-sampleTestCase.click()
 sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'x'))
 
 Windows.comment('4. Paste the cut test case at the same folder by using shortcut key [Ctrl + V]')
-sampleTestCase.click()
-WindowsEnhancedKeyword.pressKey(Keys.chord(Keys.CONTROL, 'v'))
+sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
 
 Windows.comment('5. Verify the test case is appeared')
 sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)

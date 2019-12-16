@@ -116,6 +116,7 @@ public class TestsExplorerKeyword {
 		WebElement treeItem = findTreeItem(treeItemName);
 		Actions action = new Actions(Windows.getDriver());
 		action.contextClick(treeItem).build().perform();
+		Windows.sleep(500L);
 	}
 
 	static void openNewContextMenu(String treeItemName) {
