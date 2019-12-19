@@ -52,9 +52,11 @@ public class TestCasesKeyword {
 
 	static void createTestCaseUsingAcceleratorKeys(String name, String description, String tag) {
 		TestsExplorerKeyword.focusToTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
-		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
-		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
-		WindowsEnhancedKeyword.sendKeys('f');
+//		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
+//		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
+//		WindowsEnhancedKeyword.sendKeys('f');
+		Windows.click(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File'))
+		WindowsEnhancedKeyword.sendKeys(Keys.DOWN);
 		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
 		WindowsEnhancedKeyword.sendKeys('t');
 		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
