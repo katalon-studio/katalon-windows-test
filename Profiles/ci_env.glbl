@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'C:\\Users\\katalon-test\\Desktop\\katalon-window-test'</initValue>
+      <initValue>''</initValue>
       <name>G_projectLocation</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
