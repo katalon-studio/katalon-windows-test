@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>ci_env</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Users\\katalon-test\\Desktop\\katalon\\katalon\\katalon.exe'</initValue>
+      <name>G_appPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_username</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_password</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Users\\katalon-test\\Desktop\\katalon-window-test'</initValue>
+      <name>G_projectLocation</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>20</initValue>
+      <name>G_longTimeout</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
