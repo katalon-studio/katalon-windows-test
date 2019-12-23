@@ -96,10 +96,7 @@ public class TestsExplorerKeyword {
 		if (!StringUtils.isBlank(parentFolderName)) {
 			focusToTreeItem(parentFolderName);
 		}
-		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
-		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
-		WindowsEnhancedKeyword.sendKeys('f');
-		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		MenubarKeyword.openNewMenu();
 		WindowsEnhancedKeyword.sendKeys('f');
 		inputFolderInfo(folderName);
 	}
@@ -119,7 +116,7 @@ public class TestsExplorerKeyword {
 		Windows.sleep(500L);
 	}
 
-	static void openNewContextMenu(String treeItemName) {
+	static void openNewContextMenuAtTreeItem(String treeItemName) {
 		if (StringUtils.isBlank(treeItemName)) {
 			return;
 		}

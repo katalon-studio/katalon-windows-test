@@ -59,6 +59,7 @@ Windows.comment('4. Paste the cut test case at the same folder by using context 
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.sendKeys('p')
 WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
+Windows.sleep(1000L)
 
 Windows.comment('5. Verify the test case is appeared')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)

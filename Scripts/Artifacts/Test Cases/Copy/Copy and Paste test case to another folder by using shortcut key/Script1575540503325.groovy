@@ -60,6 +60,7 @@ sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'c'))
 Windows.comment('5. Paste the copied test case to the sample folder by using shortcut key [Ctrl + V]')
 WebElement sampleFolder = TestsExplorerKeyword.findTreeItem(sampleFolderName)
 sampleFolder.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
+Windows.sleep(1000L)
 
 Windows.comment('6. Verify the cloned test case is appeared under the sample folder')
 WebElement clonedTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, sampleFolderName)

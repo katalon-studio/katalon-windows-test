@@ -56,6 +56,7 @@ sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'x'))
 
 Windows.comment('4. Paste the cut test case at the same folder by using shortcut key [Ctrl + V]')
 sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
+Windows.sleep(1000L)
 
 Windows.comment('5. Verify the test case is appeared')
 sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)

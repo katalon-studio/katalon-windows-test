@@ -63,6 +63,7 @@ Windows.comment('5. Paste the cut test case to the sample folder by using contex
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleFolderName)
 WindowsEnhancedKeyword.sendKeys('p')
 WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
+Windows.sleep(1000L)
 
 Windows.comment('6. Verify the sample test case is disappeared from the original folder')
 WebElement originalTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, TestsExplorerKeyword.TESTS_EXPLORER_NAME)

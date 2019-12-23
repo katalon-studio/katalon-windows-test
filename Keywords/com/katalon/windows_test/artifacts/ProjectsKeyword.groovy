@@ -20,6 +20,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.configuration.RunConfiguration
 import java.util.concurrent.TimeUnit
+
+import org.openqa.selenium.NotFoundException
 import org.openqa.selenium.WebElement
 import io.appium.java_client.AppiumDriver
 
@@ -40,19 +42,30 @@ public class ProjectsKeyword {
 		AppiumDriver<?> driver = Windows.getDriver();
 		driver.manage().timeouts().implicitlyWait(FIND_ELEMENT_TIMEOUT_IN_MILLIS, TimeUnit.MILLISECONDS);
 
-		WebElement closeButton = null;
+		boolean isPassed = false;
 		while (elapsed < timeout) {
 			try {
-				closeButton = Windows.findElement(findWindowsObject('Object Repository/Dialogs/Plugins/Button_Close'), FailureHandling.OPTIONAL);
+				try {
+					WebElement loadingDialog = Windows.getDriver().findElementByXPath('/Window//Window');
+					if (loadingDialog == null) {
+						isPassed = true;
+						break;
+					}
+				} catch (NotFoundException error) {
+					isPassed = true;
+					break;
+				}
+				WebElement closeButton = Windows.findElement(findWindowsObject('Object Repository/Dialogs/Plugins/Button_Close'), FailureHandling.OPTIONAL);
 				if (closeButton != null) {
 					closeButton.click();
+					isPassed = true;
 					break;
 				}
 			} catch (Exception error) {
 				//
 			}
 			println ''
-			println 'waitForProjectLoad'
+			println 'waitForProjectLoad...'
 			println ''
 			elapsed = new Date().getTime() - startTime.getTime();
 		}
@@ -60,10 +73,10 @@ public class ProjectsKeyword {
 		int defaultTimeout = RunConfiguration.getTimeOut();
 		driver.manage().timeouts().implicitlyWait(defaultTimeout, TimeUnit.SECONDS);
 
-		if (closeButton == null) {
-			KeywordUtil.markFailedAndStop("Failed to wait for project to load");
+		if (isPassed) {
+			KeywordUtil.markPassed("Katalon Project is fully loaded");
 		} else {
-			KeywordUtil.markPassed("Katalon Project is fully loaded")
+			KeywordUtil.markFailedAndStop("Failed to wait for project to load");
 		}
 	}
 }

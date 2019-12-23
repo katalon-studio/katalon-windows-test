@@ -26,13 +26,15 @@ import internal.GlobalVariable
 
 public class MenubarKeyword {
 	static void openFileMenu() {
-		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
-		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
-		WindowsEnhancedKeyword.sendKeys('f');
+//		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
+//		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
+//		WindowsEnhancedKeyword.sendKeys('f');
+		Windows.click(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File'));
 	}
 
 	static void openNewMenu() {
 		openFileMenu();
+		WindowsEnhancedKeyword.sendKeys('n');
 		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
 	}
 }

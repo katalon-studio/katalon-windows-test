@@ -52,12 +52,7 @@ public class TestCasesKeyword {
 
 	static void createTestCaseUsingAcceleratorKeys(String name, String description, String tag) {
 		TestsExplorerKeyword.focusToTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
-//		WindowsEnhancedKeyword.sendKeys(Keys.ALT);
-//		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
-//		WindowsEnhancedKeyword.sendKeys('f');
-		Windows.click(findWindowsObject('Object Repository/MenuBar/File/MenuItem_File'))
-		WindowsEnhancedKeyword.sendKeys(Keys.DOWN);
-		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		MenubarKeyword.openNewMenu();
 		WindowsEnhancedKeyword.sendKeys('t');
 		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
 		inputTestCaseInfo(name, description, tag);
@@ -108,6 +103,6 @@ public class TestCasesKeyword {
 	}
 
 	static void openNewContextMenu() {
-		TestsExplorerKeyword.openNewContextMenu(ROOT_TEST_CASES_FOLDER_NAME);
+		TestsExplorerKeyword.openNewContextMenuAtTreeItem(ROOT_TEST_CASES_FOLDER_NAME);
 	}
 }

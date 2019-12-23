@@ -59,6 +59,7 @@ sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'c'))
 Windows.comment('4. Paste the copied test case by using shortcut key [Ctrl + V]')
 sampleTestCase.click()
 sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
+Windows.sleep(1000L)
 
 Windows.comment('5. Verify the cloned test case is appeared (Name: "<sample test case name> - Copy")')
 WebElement clonedTestCase = TestsExplorerKeyword.findTreeItem(clonedTestCaseName)
