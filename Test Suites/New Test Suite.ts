@@ -11,9 +11,9 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>f82c5786-3ae3-4921-abdd-ced2a638eeef</testSuiteGuid>
    <testCaseLink>
-      <guid>05f3f19a-cae2-4449-86ca-b36383c32b6d</guid>
+      <guid>038ca417-9657-45b7-8079-61226dae31fb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Project/Verify can open project</testCaseId>
+      <testCaseId>Test Cases/Artifacts/Test Cases/Create/Create Test Case by using context menu</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

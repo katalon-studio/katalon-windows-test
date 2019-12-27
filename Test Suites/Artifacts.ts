@@ -9,11 +9,11 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Desktop</groupName>
-            <profileName>ci_env</profileName>
+            <profileName>default</profileName>
             <runConfigurationId>Windows</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/Manage Test Cases/All Cases</testSuiteEntity>
+         <testSuiteEntity>Test Suites/New Test Suite</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>
