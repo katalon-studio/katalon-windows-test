@@ -9,7 +9,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Desktop</groupName>
-            <profileName>default</profileName>
+            <profileName>ci_env</profileName>
             <runConfigurationId>Windows</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>

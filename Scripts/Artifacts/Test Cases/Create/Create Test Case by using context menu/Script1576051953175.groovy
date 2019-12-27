@@ -48,7 +48,7 @@ String newTestCaseTag = NamingKeyword.generateTestCaseTag()
 
 if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-	Windows.startApplication(GlobalVariable.G_appPath)
+	Windows.startApplicationWithTitle(GlobalVariable.G_appPath, "Katalon Studio")
 	ProjectsKeyword.waitForProjectLoad()
 }
 
