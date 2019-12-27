@@ -8,6 +8,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Setup WinAppDriver
+        run: |
+          C:
+          cd "Program Files (x86)\Windows Application Driver"
+          WinAppDriver.exe 4723
+        shell: cmd
+      
 #     - name: Check out code
 #       uses: actions/checkout@v1
     
@@ -33,12 +40,4 @@ jobs:
 #         cd katalon-studio\Katalon_Studio_Engine_Windows_64-7.2.1
 #         katalonc -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuiteCollectionPath="Test Suites/Artifacts" -apiKey="478f4186-56e2-497d-9238-ea8870c7d8e1"
 #       shell: cmd
-    
-    - name: Setup WinAppDriver
-      run: |
-        C:
-        dir
-        cd "Program Files (x86)"
-        dir
-      shell: cmd
         
