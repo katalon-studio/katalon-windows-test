@@ -1,0 +1,18 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v1
+      
+    - name: Download Katalon Studio
+      run: |
+        dir
+        wget -O katalon.zip https://github.com/katalon-studio/katalon-studio/releases/download/v7.2.2/Katalon_Studio_Windows_64-7.2.2.zip
+        dir
