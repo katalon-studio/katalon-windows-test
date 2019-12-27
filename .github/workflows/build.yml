@@ -36,7 +36,6 @@ jobs:
     
     - name: Setup WinAppDriver
       run: |
-        cd "C:\Program Files (x86)"
-        dir
+        WinAppDriver.exe 4723
       shell: cmd
         
