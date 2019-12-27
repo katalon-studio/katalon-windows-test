@@ -1,0 +1,41 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+#     - name: Check out code
+#       uses: actions/checkout@v1
+    
+#     - name: Cache
+#       id: cache
+#       uses: actions/cache@v1
+#       with:
+#         path: katalon-studio
+#         key: katalon-studio-7.2.1.0
+      
+#     - name: Download Katalon Studio
+#       if: steps.cache.outputs.cache-hit != 'true'
+#       run: |
+#         mkdir katalon-studio
+#         cd katalon-studio
+#         Invoke-WebRequest -Uri "https://download.katalon.com/7.2.1/Katalon_Studio_Engine_Windows_64-7.2.1.zip" -OutFile "katalon.zip"
+#         unzip katalon.zip
+#         rm katalon.zip
+        
+#     - name: Run test
+#       run: |
+#         set projectPath=%cd%\katalon-window-test.prj
+#         cd katalon-studio\Katalon_Studio_Engine_Windows_64-7.2.1
+#         katalonc -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuiteCollectionPath="Test Suites/Artifacts" -apiKey="478f4186-56e2-497d-9238-ea8870c7d8e1"
+#       shell: cmd
+    
+    - name: Setup WinAppDriver
+      run: |
+        WinAppDriver.exe 4723
+      shell: cmd
+        
