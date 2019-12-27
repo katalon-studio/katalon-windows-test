@@ -15,8 +15,8 @@ jobs:
       id: cache
       uses: actions/cache@v1
       with:
-        path: katalon-7.2.2
-        key: katalon-7.2.2
+        path: release
+        key: release
       
     - name: Download Katalon Studio
       if: steps.cache.outputs.cache-hit != 'true'
