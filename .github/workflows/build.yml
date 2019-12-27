@@ -26,5 +26,7 @@ jobs:
         Invoke-WebRequest -Uri "https://download.katalon.com/7.2.1/Katalon_Studio_Engine_Windows_64-7.2.1.zip" -OutFile "katalon.zip"
         unzip katalon.zip
         rm katalon.zip
-        cd Katalon_Studio_Engine_Windows_64-7.2.1
+        
+    - name: Run test
+      run: |
         dir
