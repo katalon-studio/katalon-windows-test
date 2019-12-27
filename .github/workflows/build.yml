@@ -22,4 +22,4 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
         Invoke-WebRequest -Uri "https://download.katalon.com/7.2.1/Katalon_Studio_Windows_64-7.2.1.zip" -OutFile "katalon.zip"
-        dir
+        unzip katalon.zip
