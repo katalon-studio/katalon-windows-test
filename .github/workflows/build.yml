@@ -22,5 +22,5 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
         dir
-        certutil.exe -urlcache -split -f "https://github.com/katalon-studio/katalon-studio/releases/download/v7.2.2/Katalon_Studio_Windows_64-7.2.2.zip" katalon.zip
+        certutil.exe -urlcache -split -f "https://github.com/katalon-studio/katalon-studio/releases/download/v7.2.2/lastest_release.json" release.json
         dir
