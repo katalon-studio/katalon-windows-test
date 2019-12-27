@@ -41,6 +41,6 @@ jobs:
         set appPath=%cd%\Katalon_Studio_Windows_64-7.2.1\katalon.exe
         set projectPath=%cd%\katalon-window-test.prj
         cd katalon-studio\Katalon_Studio_Engine_Windows_64-7.2.1
-        katalonc -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="ci_env" -browserType="Windows" -apiKey="478f4186-56e2-497d-9238-ea8870c7d8e1" -g_appPath="%appPath%"
+        katalonc -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="ci_env" -browserType="Windows" -apiKey="478f4186-56e2-497d-9238-ea8870c7d8e1" -g_G_appPath="%appPath%"
       shell: cmd
         
