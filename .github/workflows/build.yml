@@ -8,12 +8,12 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Setup WinAppDriver
-        run: |
-          C:
-          cd "Program Files (x86)\Windows Application Driver"
-          start WinAppDriver.exe 4723
-        shell: cmd
+    - name: Setup WinAppDriver
+      run: |
+        C:
+        cd "Program Files (x86)\Windows Application Driver"
+        start WinAppDriver.exe 4723
+      shell: cmd
       
     - name: Check out code
       uses: actions/checkout@v1
