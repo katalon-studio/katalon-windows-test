@@ -21,8 +21,6 @@ jobs:
     - name: Download Katalon Studio
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
-        dir
         mkdir release
         cd release
         certutil.exe -urlcache -split -f "https://github.com/katalon-studio/katalon-studio/releases/download/v7.2.2/lastest_release.json" release.json
-        dir
