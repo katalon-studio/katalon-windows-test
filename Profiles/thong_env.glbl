@@ -6,22 +6,22 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'C:\\Users\\thongnmtran\\Desktop\\KS 7.2.0 - Copy\\katalon.exe'</initValue>
+      <initValue>'C:\\Users\\thongnmtran\\Desktop\\KS 7.2.1\\katalon.exe'</initValue>
       <name>G_appPath</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'thongnmtran@kms-technology.com'</initValue>
+      <initValue>'lieuqa@kms-technology.com'</initValue>
       <name>G_username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'12345678'</initValue>
       <name>G_password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'C:\\Users\\thongnmtran\\Katalon Studio\\Test 02'</initValue>
+      <initValue>'C:\\Users\\thongnmtran\\Desktop\\workspace\\katalon-windows-test\\Test_Project'</initValue>
       <name>G_projectLocation</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

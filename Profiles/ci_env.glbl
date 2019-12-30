@@ -11,12 +11,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'lieuqa@kms-technology.com'</initValue>
       <name>G_username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'12345678'</initValue>
       <name>G_password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
