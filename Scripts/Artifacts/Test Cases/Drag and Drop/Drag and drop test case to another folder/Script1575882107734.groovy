@@ -60,6 +60,7 @@ WebElement sampleFolder = TestsExplorerKeyword.findTreeItem(sampleFolderName)
 WindowsEnhancedKeyword.dragAnDrop(sampleTestCase, sampleFolder)
 
 Windows.comment('6. Verify the sample test case is disappeared from the original folder')
+Windows.sleep(1000L)
 WebElement originalTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, TestCasesKeyword.ROOT_TEST_CASES_FOLDER_NAME)
 WindowsEnhancedKeyword.verifyElementNotPresent(originalTestCase, FailureHandling.STOP_ON_FAILURE)
 

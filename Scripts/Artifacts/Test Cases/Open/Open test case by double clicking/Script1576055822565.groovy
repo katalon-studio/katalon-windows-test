@@ -56,6 +56,7 @@ Windows.comment('3. Close the sample test case')
 MainContentKeyword.closeTabItem(sampleTestCaseName)
 
 Windows.comment('4. Check for sure that the sample test case is really closed')
+Windows.sleep(1000L)
 WebElement sampleTestCaseTab = MainContentKeyword.findTabItem(sampleTestCaseName)
 WindowsEnhancedKeyword.verifyElementNotPresent(sampleTestCaseTab, FailureHandling.STOP_ON_FAILURE)
 
@@ -67,6 +68,7 @@ doubleClickAction.doubleClick()
 doubleClickAction.perform()
 
 Windows.comment('6. Verify the sample test case is opened')
+Windows.sleep(1000L)
 sampleTestCaseTab = MainContentKeyword.findTabItem(sampleTestCaseName)
 WindowsEnhancedKeyword.verifyElementPresent(sampleTestCaseTab, FailureHandling.STOP_ON_FAILURE)
 

@@ -60,6 +60,7 @@ TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.sendKeys('p')
 
 Windows.comment('4. Change the sample test case properties')
+Windows.sleep(1000L)
 Windows.click(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_Description'))
 WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.CONTROL, 'a'))
 WindowsEnhancedKeyword.sendKeys(Keys.DELETE)
@@ -75,6 +76,7 @@ TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.sendKeys('p')
 
 Windows.comment('6. Verify all new sample test case properties are presented and correct')
+Windows.sleep(1000L)
 String description = Windows.getText(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_Description'))
 Windows.verifyEqual(description, newTestCaseDescription, FailureHandling.STOP_ON_FAILURE)
 //

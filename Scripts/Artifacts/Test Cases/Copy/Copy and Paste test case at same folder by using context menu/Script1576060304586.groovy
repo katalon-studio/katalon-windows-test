@@ -58,9 +58,9 @@ Windows.comment('4. Paste the copied test case at the same folder by using conte
 TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.sendKeys('p')
 WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
-Windows.sleep(1000L)
 
 Windows.comment('5. Verify the cloned test case is appeared (Name: "<sample test case name> - Copy")')
+Windows.sleep(1000L)
 WebElement clonedTestCase = TestsExplorerKeyword.findTreeItem(clonedTestCaseName)
 WindowsEnhancedKeyword.verifyElementPresent(clonedTestCase, FailureHandling.STOP_ON_FAILURE)
 

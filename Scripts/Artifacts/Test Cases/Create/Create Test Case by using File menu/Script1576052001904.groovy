@@ -60,6 +60,7 @@ Windows.setText(findWindowsObject('Object Repository/Dialogs/New Test Case/Edit_
 Windows.click(findWindowsObject('Object Repository/Dialogs/New Test Case/Button_OK'))
 
 Windows.comment('4. Verify the created test case is existed under Test Cases folder')
+Windows.sleep(1000L)
 WebElement createdTestCaseTreeItem = TestsExplorerKeyword.findTreeItem(newTestCaseName)
 WindowsEnhancedKeyword.verifyElementPresent(createdTestCaseTreeItem, FailureHandling.STOP_ON_FAILURE)
 

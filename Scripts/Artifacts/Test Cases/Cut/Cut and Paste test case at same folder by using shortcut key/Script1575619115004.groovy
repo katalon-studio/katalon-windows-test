@@ -53,12 +53,13 @@ TestCasesKeyword.createTestCase(sampleTestCaseName)
 Windows.comment('3. Cut the sample test case by using shortcut key [Ctrl + X]')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
 sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'x'))
+Windows.sleep(1000L)
 
 Windows.comment('4. Paste the cut test case at the same folder by using shortcut key [Ctrl + V]')
 sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
-Windows.sleep(1000L)
 
 Windows.comment('5. Verify the test case is appeared')
+Windows.sleep(1000L)
 sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.verifyElementPresent(sampleTestCase, FailureHandling.STOP_ON_FAILURE)
 

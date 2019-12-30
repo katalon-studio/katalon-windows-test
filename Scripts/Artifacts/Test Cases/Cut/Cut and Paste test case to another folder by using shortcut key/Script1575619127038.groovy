@@ -57,13 +57,14 @@ TestCasesKeyword.createFolder(sampleFolderName)
 Windows.comment('4. Cut the sample test case by using context menu (Right click -> Cut)')
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
 sampleTestCase.sendKeys(Keys.chord(Keys.CONTROL, 'x'))
+Windows.sleep(1000L)
 
 Windows.comment('5. Paste the cut test case to the sample folder by using context menu (Right click -> Paste)')
 WebElement sampleFolder = TestsExplorerKeyword.findTreeItem(sampleFolderName)
 sampleFolder.sendKeys(Keys.chord(Keys.CONTROL, 'v'))
-Windows.sleep(1000L)
 
 Windows.comment('6. Verify the sample test case is disappeared from the original folder')
+Windows.sleep(1000L)
 WebElement originalTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, TestCasesKeyword.ROOT_TEST_CASES_FOLDER_NAME)
 WindowsEnhancedKeyword.verifyElementNotPresent(originalTestCase, FailureHandling.STOP_ON_FAILURE)
 

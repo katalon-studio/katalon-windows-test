@@ -57,6 +57,7 @@ TestsExplorerKeyword.openContextMenuAtTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.sendKeys('p')
 
 Windows.comment('4. Verify all sample test case properties are presented and correct')
+Windows.sleep(1000L)
 String id = Windows.getText(findWindowsObject('Object Repository/Dialogs/Test Case Properties/Edit_ID'))
 Windows.verifyEqual(id, sampleTestCaseID, FailureHandling.STOP_ON_FAILURE)
 //

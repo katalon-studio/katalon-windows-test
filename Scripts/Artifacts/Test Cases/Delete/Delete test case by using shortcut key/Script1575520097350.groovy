@@ -48,16 +48,19 @@ Windows.comment('2. Create a sample test case')
 TestCasesKeyword.createTestCase(newTestCaseName)
 
 Windows.comment('3. Delete the sample test case by shortcut key [Delete] -> [Enter]')
+Windows.sleep(1000L)
 WebElement createdTestCaseTreeItem = TestsExplorerKeyword.findTreeItem(newTestCaseName)
 createdTestCaseTreeItem.click()
 createdTestCaseTreeItem.sendKeys(Keys.DELETE)
 WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
 Windows.comment('4. Verify the sample test case is deleted')
+Windows.sleep(1000L)
 WebElement deletedTestCaseTreeItem = TestsExplorerKeyword.findTreeItem(newTestCaseName)
 WindowsEnhancedKeyword.verifyElementNotPresent(deletedTestCaseTreeItem, FailureHandling.STOP_ON_FAILURE)
 
 Windows.comment('5. Verify the sample test case is closed')
+Windows.sleep(1000L)
 WebElement deletedTestCaseTab = MainContentKeyword.findTabItem(newTestCaseName)
 WindowsEnhancedKeyword.verifyElementNotPresent(deletedTestCaseTab, FailureHandling.STOP_ON_FAILURE)
 

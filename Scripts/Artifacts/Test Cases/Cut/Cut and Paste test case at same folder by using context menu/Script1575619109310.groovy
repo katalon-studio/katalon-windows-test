@@ -62,6 +62,7 @@ WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 Windows.sleep(1000L)
 
 Windows.comment('5. Verify the test case is appeared')
+Windows.sleep(1000L)
 WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
 WindowsEnhancedKeyword.verifyElementPresent(sampleTestCase, FailureHandling.STOP_ON_FAILURE)
 

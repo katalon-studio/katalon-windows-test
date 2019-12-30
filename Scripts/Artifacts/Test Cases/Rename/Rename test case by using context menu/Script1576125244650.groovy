@@ -63,6 +63,7 @@ Windows.setText(findWindowsObject('Object Repository/Dialogs/Rename Test Case/Ed
 Windows.click(findWindowsObject('Object Repository/Dialogs/Rename Test Case/Button_OK'))
 
 Windows.comment('5. Verify the sample test case tree item name is changed')
+Windows.sleep(1000L)
 WebElement sampleTestCaseTreeItem = MainContentKeyword.findTabItem(newTestCaseName)
 WindowsEnhancedKeyword.verifyElementPresent(sampleTestCaseTreeItem, FailureHandling.STOP_ON_FAILURE)
 
