@@ -23,7 +23,7 @@ jobs:
       run: |
         mkdir katalon-studio
         cd katalon-studio
-        Invoke-WebRequest -Uri "%DOWNLOAD_LINK%" -OutFile "katalon.zip"
+        Invoke-WebRequest -Uri "$DOWNLOAD_LINK%" -OutFile "katalon.zip"
         unzip katalon.zip
         rm katalon.zip
       env:
@@ -31,14 +31,14 @@ jobs:
         
     - name: Download Katalon Studio which need test
       run: |
-        echo %DOWNLOAD_LINK%
-        Invoke-WebRequest -Uri "%DOWNLOAD_LINK%" -OutFile "katalon.zip"
+        echo $DOWNLOAD_LINK
+        Invoke-WebRequest -Uri "$DOWNLOAD_LINK" -OutFile "katalon.zip"
         unzip katalon.zip
         rm katalon.zip
         cd Katalon_Studio_Windows_64-7.2.1
         dir
-      env:
-        DOWNLOAD_LINK: https://download.katalon.com/7.2.1/Katalon_Studio_Engine_Windows_64-7.2.1.zip
+#       env:
+#         DOWNLOAD_LINK: https://download.katalon.com/7.2.1/Katalon_Studio_Engine_Windows_64-7.2.1.zip
         
     - name: Run test
       run: | 
