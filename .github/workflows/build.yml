@@ -31,7 +31,7 @@ jobs:
         
     - name: Download Katalon Studio which need test
       run: |
-        Invoke-WebRequest -Uri "$DOWNLOAD_LINK" -OutFile "katalon.zip"
+        Invoke-WebRequest -Uri "$Env:DOWNLOAD_LINK" -OutFile "katalon.zip"
         unzip katalon.zip
         rm katalon.zip
         cd Katalon_Studio_Windows_64-7.2.1
