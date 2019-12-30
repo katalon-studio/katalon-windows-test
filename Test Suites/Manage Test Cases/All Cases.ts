@@ -55,13 +55,13 @@
    <testCaseLink>
       <guid>54b1fd41-68ad-4973-b517-922502d30d6c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Artifacts/Test Cases/Cut/Cut and Paste test case at same folder by using context menu</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1daa7c2d-797a-42c9-b3ff-3c688a50e69d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Artifacts/Test Cases/Cut/Cut and Paste test case at same folder by using shortcut key</testCaseId>
    </testCaseLink>
    <testCaseLink>
