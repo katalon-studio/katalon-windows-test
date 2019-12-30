@@ -36,7 +36,7 @@ class BeforeAndAfterTestSuite {
 	def BeforeTestSuite(TestSuiteContext testSuiteContext) {
 		GlobalVariable.G_runTestCasesContinuously = true
 		if (!GlobalVariable.G_runTestSuitesContinuously) {
-			Windows.startApplication(GlobalVariable.G_appPath)
+			Windows.startApplicationWithTitle(GlobalVariable.G_appPath, "Katalon Studio")
 			AuthKeyword.login(GlobalVariable.G_username, GlobalVariable.G_password)
 			WelcomeKeyword.skipWelcomeDialog()
 			ProjectsKeyword.openProject(GlobalVariable.G_projectLocation)
