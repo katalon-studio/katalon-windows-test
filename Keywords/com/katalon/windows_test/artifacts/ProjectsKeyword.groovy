@@ -6,6 +6,7 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
+import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
@@ -21,6 +22,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.configuration.RunConfiguration
 import java.util.concurrent.TimeUnit
 
+import org.openqa.selenium.Keys
 import org.openqa.selenium.NotFoundException
 import org.openqa.selenium.WebElement
 import io.appium.java_client.AppiumDriver
@@ -78,5 +80,22 @@ public class ProjectsKeyword {
 		} else {
 			KeywordUtil.markFailedAndStop("Failed to wait for project to load");
 		}
+	}
+
+	def static void openProject(String projectPath) {
+		try {
+			Windows.sendKeys(findWindowsObject("Object Repository/MenuBar/File/MenuItem_File"), Keys.chord(Keys.CONTROL + "O"));
+			Windows.clearText(findWindowsObject("Object Repository/Windows/Browser For Folder/Edit_Folder_Path"));
+			Windows.setText(findWindowsObject("Object Repository/Windows/Browser For Folder/Edit_Folder_Path"), projectPath);
+			WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		} catch (NotFoundException error) {
+			// Just skip
+		}
+	}
+
+	def static void closeAndCleanProject() {
+		Windows.click(findWindowsObject("Object Repository/MenuBar/Project/MenuItem_Project"));
+		WindowsEnhancedKeyword.sendKeys('cc');
+		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
 	}
 }

@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'thongnmtran@kms-technology.com'</initValue>
       <name>G_username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'C:\\Users\\katalon-test\\Katalon Studio\\TestExternalDB'</initValue>
+      <initValue>'C:\\Users\\thongnmtran\\Katalon Studio\\Test 02'</initValue>
       <name>G_projectLocation</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

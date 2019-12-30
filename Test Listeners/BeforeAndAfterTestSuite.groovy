@@ -5,6 +5,8 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import com.katalon.windows_test.artifacts.ProjectsKeyword
 import com.katalon.windows_test.components.MainWindowKeyword
+import com.katalon.windows_test.components.WelcomeKeyword
+import com.katalon.windows_test.keywords.AuthKeyword
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
@@ -35,6 +37,9 @@ class BeforeAndAfterTestSuite {
 		GlobalVariable.G_runTestCasesContinuously = true
 		if (!GlobalVariable.G_runTestSuitesContinuously) {
 			Windows.startApplication(GlobalVariable.G_appPath)
+			AuthKeyword.login(GlobalVariable.G_username, GlobalVariable.G_password)
+			WelcomeKeyword.skipWelcomeDialog()
+			ProjectsKeyword.openProject(GlobalVariable.G_projectLocation)
 			ProjectsKeyword.waitForProjectLoad()
 		}
 	}
@@ -46,7 +51,10 @@ class BeforeAndAfterTestSuite {
 	@AfterTestSuite
 	def AfterTestSuite(TestSuiteContext testSuiteContext) {
 		if (!GlobalVariable.G_runTestSuitesContinuously) {
-			MainWindowKeyword.close()
+			ProjectsKeyword.closeAndCleanProject()
+			AuthKeyword.deactive()
+			Windows.sleep(10000L)
+			MainWindowKeyword.closeByClickCloseActivation()
 		}
 	}
 }

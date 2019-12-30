@@ -6,9 +6,6 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
-import org.openqa.selenium.Keys
-
-import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
@@ -23,18 +20,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class MainWindowKeyword {
-
-	static void close() {
-		Windows.sleep(1000L);
-		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
-		WindowsEnhancedKeyword.releaseKey(Keys.F4);
-		WindowsEnhancedKeyword.releaseKey(Keys.ENTER);
-		WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.ALT, Keys.F4));
-		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
-	}
-
-	static void closeByClickCloseActivation() {
-		Windows.click(findWindowsObject("Object Repository/Dialogs/Activation/Button_Close"))
+public class WelcomeKeyword {
+	
+	static void skipWelcomeDialog() {
+		Windows.click(findWindowsObject("Object Repository/Dialogs/Welcome/Button_Skip"));
 	}
 }

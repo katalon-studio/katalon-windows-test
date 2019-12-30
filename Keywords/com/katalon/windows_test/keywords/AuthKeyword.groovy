@@ -1,4 +1,4 @@
-package com.katalon.windows_test.components
+package com.katalon.windows_test.keywords
 
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
@@ -7,8 +7,8 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import org.openqa.selenium.Keys
+import org.openqa.selenium.NotFoundException
 
-import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
@@ -23,18 +23,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class MainWindowKeyword {
+public class AuthKeyword {
 
-	static void close() {
-		Windows.sleep(1000L);
-		WindowsEnhancedKeyword.releaseKey(Keys.ALT);
-		WindowsEnhancedKeyword.releaseKey(Keys.F4);
-		WindowsEnhancedKeyword.releaseKey(Keys.ENTER);
-		WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.ALT, Keys.F4));
-		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+	static void login(String username, String password) {
+		try {
+			Windows.setText(findWindowsObject("Object Repository/Dialogs/Activation/Edit_Username"), username);
+			Windows.setText(findWindowsObject("Object Repository/Dialogs/Activation/Edit_Password"), password);
+			WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		} catch (NotFoundException error) {
+			// Just skip
+		}
 	}
 
-	static void closeByClickCloseActivation() {
-		Windows.click(findWindowsObject("Object Repository/Dialogs/Activation/Button_Close"))
+	static void deactive() {
+		Windows.click(findWindowsObject("Object Repository/Toolbar/Account/SplitButton_Account"));
+		WindowsEnhancedKeyword.sendKeys('d');
 	}
 }
