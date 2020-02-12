@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>Pane_Tests_Explorer</name>
+   <name>Text_START</name>
    <tag></tag>
-   <locator>//Tab[@Name=&quot;Tests Explorer&quot;]/Pane[@Name=&quot;Tests Explorer&quot;]</locator>
+   <locator>//Tab[@Name=&quot;Tests Explorer&quot;]/Pane[@Name=&quot;Tests Explorer&quot;]/Pane/Pane/Text[@Name=&quot;START&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
