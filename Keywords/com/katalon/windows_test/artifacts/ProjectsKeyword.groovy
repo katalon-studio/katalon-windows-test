@@ -84,8 +84,8 @@ public class ProjectsKeyword {
 
 	def static boolean hasOpenedAnyProjects() {
 		try {
-			WebElement testsExplorerPanel = Windows.findElement(findWindowsObject("Object Repository/Tests Explorer/Text_START"));
-			return testsExplorerPanel != null;
+			WebElement lblStart = Windows.findElement(findWindowsObject("Object Repository/Tests Explorer/Text_START"));
+			return lblStart == null;
 		} catch (Exception error) {
 			return false;
 		}
