@@ -8,6 +8,7 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import org.openqa.selenium.Keys
 import org.openqa.selenium.NotFoundException
+import org.openqa.selenium.NoSuchElementException
 
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint
@@ -25,13 +26,14 @@ import internal.GlobalVariable
 
 public class AuthKeyword {
 
-	static void login(String username, String password) {
+	static boolean login(String username, String password) {
 		try {
 			Windows.setText(findWindowsObject("Object Repository/Dialogs/Activation/Edit_Username"), username);
 			Windows.setText(findWindowsObject("Object Repository/Dialogs/Activation/Edit_Password"), password);
 			WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
-		} catch (NotFoundException error) {
-			// Just skip
+			return true;
+		} catch (Exception error) {
+			return false;
 		}
 	}
 

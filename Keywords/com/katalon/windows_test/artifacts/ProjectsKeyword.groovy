@@ -82,6 +82,23 @@ public class ProjectsKeyword {
 		}
 	}
 
+	def static boolean hasOpenedAnyProjects() {
+		try {
+			WebElement testsExplorerPanel = Windows.findElement(findWindowsObject("Object Repository/Tests Explorer/Pane_Tests_Explorer"));
+			return testsExplorerPanel != null;
+		} catch (Exception error) {
+			return false;
+		}
+	}
+
+	def static boolean openProjectOrDefault(String projectPath) {
+		if (this.hasOpenedAnyProjects()) {
+			return false;
+		}
+		this.openProject(projectPath);
+		return true;
+	}
+
 	def static void openProject(String projectPath) {
 		try {
 			Windows.sendKeys(findWindowsObject("Object Repository/MenuBar/File/MenuItem_File"), Keys.chord(Keys.CONTROL + "O"));

@@ -21,7 +21,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public class WelcomeKeyword {
-	
+
 	static void skipWelcomeDialog() {
 		Windows.click(findWindowsObject("Object Repository/Dialogs/Welcome/Button_Skip"));
 	}

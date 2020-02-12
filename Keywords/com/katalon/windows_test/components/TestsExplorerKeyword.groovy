@@ -33,17 +33,13 @@ public class TestsExplorerKeyword {
 	}
 
 	static WebElement findTreeItem(String treeItemName, String parentFolderName) {
-		try {
-			String treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]',
-					TESTS_EXPLORER_NAME, treeItemName);
-			if (!StringUtils.isEmpty(parentFolderName)) {
-				treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]/TreeItem[@Name="%s"]',
-						TESTS_EXPLORER_NAME, parentFolderName, treeItemName);
-			}
-			return Windows.getDriver().findElementByXPath(treeItemXPath);
-		} catch (NoSuchElementException error) {
-			return null;
+		String treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]',
+				TESTS_EXPLORER_NAME, treeItemName);
+		if (!StringUtils.isEmpty(parentFolderName)) {
+			treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]/TreeItem[@Name="%s"]',
+					TESTS_EXPLORER_NAME, parentFolderName, treeItemName);
 		}
+		return WindowsEnhancedKeyword.findElementByXPath(treeItemXPath);
 	}
 
 	static WebElement focusToTreeItem(String treeItemName) {

@@ -37,10 +37,12 @@ class BeforeAndAfterTestSuite {
 		GlobalVariable.G_runTestCasesContinuously = true
 		if (!GlobalVariable.G_runTestSuitesContinuously) {
 			Windows.startApplicationWithTitle(GlobalVariable.G_appPath, "Katalon Studio")
-			AuthKeyword.login(GlobalVariable.G_username, GlobalVariable.G_password)
-			Windows.sleep(10000L)
-			WelcomeKeyword.skipWelcomeDialog()
-			ProjectsKeyword.openProject(GlobalVariable.G_projectLocation)
+			boolean isFirstLogin = AuthKeyword.login(GlobalVariable.G_username, GlobalVariable.G_password)
+			if (isFirstLogin) {
+				Windows.sleep(10000L)
+				WelcomeKeyword.skipWelcomeDialog()
+			}
+			ProjectsKeyword.openProjectOrDefault(GlobalVariable.G_projectLocation)
 			ProjectsKeyword.waitForProjectLoad()
 		}
 	}

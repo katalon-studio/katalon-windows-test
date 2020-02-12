@@ -1,23 +1,25 @@
 package com.katalon.windows_test.keywords
 
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.interactions.Actions
+import org.openqa.selenium.NoSuchElementException
 
+import com.katalon.windows_test.util.NamingKeyword
 import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.WindowsTestObject
+import com.kms.katalon.core.testobject.WindowsTestObject.LocatorStrategy
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.windows.constants.WindowsDriverConstants
 import com.kms.katalon.core.windows.driver.WindowsDriverFactory
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import com.kms.katalon.core.windows.keyword.helper.WindowsActionHelper
-import org.openqa.selenium.WebElement
 
 import io.appium.java_client.AppiumDriver
-import io.appium.java_client.MobileBy
 import io.appium.java_client.windows.WindowsDriver
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 public class WindowsEnhancedKeyword {
 	public static final String DESIRED_CAPABILITIES_PROPERTY = "desiredCapabilities";
@@ -161,16 +163,32 @@ public class WindowsEnhancedKeyword {
 		Actions action = new Actions(Windows.getDriver())
 		action.moveToElement(thumbElement).clickAndHold().moveByOffset(0, targetThumbY).release().perform()
 	}
-	
+
 	def static void clickOffset(WindowsTestObject windowsObject, int x, int y) {
 		WebElement element = Windows.findElement(windowsObject)
-		
+
 		Actions action = new Actions(Windows.getDriver())
 		action.moveToElement(element, x, y).click().release().perform()
 	}
-	
+
 	def static void clickElementOffset(WebElement element, int x, int y) {
 		Actions action = new Actions(Windows.getDriver())
 		action.moveToElement(element, x, y).click().perform()
+	}
+
+	def static WebElement findElementByXPath(String xpath) {
+		WebElement element = null;
+		int timeout = RunConfiguration.getTimeOut() * 1000;
+		long elapsed = 0;
+		Date startTime = new Date();
+		while (element == null && elapsed < timeout) {
+			try {
+				element = Windows.getDriver().findElementByXPath(xpath);
+			} catch (NoSuchElementException error) {
+				element = null;
+			}
+			elapsed = new Date().getTime() - startTime.getTime();
+		}
+		return element;
 	}
 }

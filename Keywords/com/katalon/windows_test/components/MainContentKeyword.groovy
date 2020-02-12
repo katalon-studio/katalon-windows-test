@@ -27,13 +27,9 @@ import org.openqa.selenium.NoSuchElementException
 public class MainContentKeyword {
 
 	static WebElement findTabItem(String tabItemName) {
-		try {
-			String tabItemXPath = String.format('//Tab[@Name="%s"]/TabItem[@Name="%s"]',
-					tabItemName, tabItemName);
-			return Windows.getDriver().findElementByXPath(tabItemXPath);
-		} catch (NoSuchElementException error) {
-			return null;
-		}
+		String tabItemXPath = String.format('//Tab[@Name="%s"]/TabItem[@Name="%s"]',
+				tabItemName, tabItemName);
+		return WindowsEnhancedKeyword.findElementByXPath(tabItemXPath);
 	}
 
 	static void closeTabItem(String tabItemName) {
