@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename execution profile by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new execution profile
+3. Open rename dialog by using context menu (Right click -> Rename)
+4. Input new execution profile name
+5. Verify the new execution tree item name is changed
+7. Delete the new execution profile</comment>
+   <testCaseGuid>b6cdf8ef-c636-4462-bf9c-0a1878307e7c</testCaseGuid>
+</TestCaseEntity>

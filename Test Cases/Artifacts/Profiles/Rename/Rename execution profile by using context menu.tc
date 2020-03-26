@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename execution profile by using context menu</name>
+   <tag></tag>
+   <comment>2. Create new execution profile
+3. Open rename dialog by using context menu (Right click -> Rename)
+4. Input new execution profile name
+5. Verify the new execution tree item name is changed
+7. Delete the new execution profile</comment>
+   <testCaseGuid>2b1a15be-7528-4feb-9985-8c1c2258f586</testCaseGuid>
+</TestCaseEntity>

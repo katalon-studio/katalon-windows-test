@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create execution profile by using context menu</name>
+   <tag></tag>
+   <comment>2. Open `New` execution profile at `Profiles` folder
+3. Input execution profile name and press OK
+4. Verify the created execution profile is existed under Profiles folder
+5. Verify the created execution profile is opened
+7. Delete the created execution profile</comment>
+   <testCaseGuid>9bd09598-20e9-459a-b292-2b757ac626b6</testCaseGuid>
+</TestCaseEntity>
