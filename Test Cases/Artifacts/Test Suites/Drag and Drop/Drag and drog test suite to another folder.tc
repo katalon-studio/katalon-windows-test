@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Drag and drog test suite to another folder</name>
+   <tag></tag>
+   <comment>2. Create new test suite
+3. Crate new folder
+4. Drap and drop the new test suite to the new folder
+5. Verify the new test suite is disappeared form the original folder
+7. Delete the new folder</comment>
+   <testCaseGuid>956bf94b-89e9-4b08-bb49-9cfe9ac0308b</testCaseGuid>
+</TestCaseEntity>

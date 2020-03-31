@@ -9,6 +9,9 @@ import org.openqa.selenium.WebElement
 
 import com.katalon.windows_test.artifacts.ProjectsKeyword
 import com.katalon.windows_test.artifacts.TestCasesKeyword
+import com.katalon.windows_test.artifacts.TestDataKeyword
+import com.katalon.windows_test.artifacts.TestSuitesKeyword
+import com.katalon.windows_test.components.MainContentKeyword
 import com.katalon.windows_test.components.MainWindowKeyword
 import com.katalon.windows_test.components.TestsExplorerKeyword
 import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
@@ -30,17 +33,17 @@ import internal.GlobalVariable as GlobalVariable
  * [Script]
  *
  * 1. Open `Katalon Studio` and wait for project to load
- * 2. Create a sample test case
- * 3. Create a sample folder
- * 4. Drag and drop the sample test case to the sample folder
- * 5. Verify the sample test case is disappeared from the original folder
- * 6. Verify the sample test case is appeared under the sample folder
- * 7. Delete the sample folder
+ * 2. Create a new test data
+ * 3. Open rename dialog by using context menu (Right click -> Rename)
+ * 4. Input new test data name
+ * 5. Verify the new test data tree item name is changed
+ * 6. Verify the new tes data  tab item name is changed
+ * 7. Delete the new test data
  * 8. Close Katalon Studio
  */
 
-String sampleTestCaseName = NamingKeyword.generateTestCaseName()
-String sampleFolderName = NamingKeyword.generateTestCaseFolderName()
+String newTestDataName = NamingKeyword.generateTestDataName()
+String verifyTestDataName = NamingKeyword.generateTestDataName()
 
 if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
@@ -48,32 +51,39 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 	ProjectsKeyword.waitForProjectLoad()
 }
 
-Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCase(sampleTestCaseName)
+Windows.comment('2. Create a new test data')
+TestDataKeyword.createDataFile(newTestDataName)
 
-Windows.comment('3. Create a sample folder')
-TestCasesKeyword.createFolder(sampleFolderName)
-
-Windows.comment('4. Drag and drop the sample test case to the sample folder')
-WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
-WebElement sampleFolder = TestsExplorerKeyword.findTreeItem(sampleFolderName)
-WindowsEnhancedKeyword.dragAnDrop(sampleTestCase, sampleFolder)
-
-Windows.comment('5. Verify the sample test case is disappeared from the original folder')
+Windows.comment('3. Open rename dialog by using context menu (Right click -> Rename)')
 Windows.sleep(1000L)
-WebElement originalTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, TestCasesKeyword.ROOT_TEST_CASES_FOLDER_NAME)
-WindowsEnhancedKeyword.verifyElementNotPresent(originalTestCase, FailureHandling.STOP_ON_FAILURE)
+TestsExplorerKeyword.openContextMenuAtTreeItem(newTestDataName)
+WindowsEnhancedKeyword.sendKeys('r')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
-Windows.comment('6. Verify the sample test case is appeared under the sample folder')
-WebElement movedTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, sampleFolderName)
-WindowsEnhancedKeyword.verifyElementPresent(movedTestCase, FailureHandling.STOP_ON_FAILURE)
+Windows.comment('4. Input new test data name')
+Windows.sleep(1000L)
+Windows.clearText(findWindowsObject('Object Repository/Dialogs/Rename Test Data/Edit_Name'))
+Windows.setText(findWindowsObject('Object Repository/Dialogs/Rename Test Data/Edit_Name'), verifyTestDataName)
+Windows.click(findWindowsObject('Object Repository/Dialogs/Rename Test Data/Button_OK'))
 
-Windows.comment('7. Delete the sample folder')
-TestsExplorerKeyword.deleteTreeItem(sampleFolderName)
+Windows.comment('5. Verify the new test data tree item name is changed')
+Windows.sleep(1000L)
+WebElement verifyTestDataTreeItem = MainContentKeyword.findTabItem(verifyTestDataName)
+WindowsEnhancedKeyword.verifyElementPresent(verifyTestDataTreeItem, FailureHandling.STOP_ON_FAILURE)
+
+//Windows.comment('6. Verify the new test data tab item name is changed')
+//WebElement verifyTabItem = MainContentKeyword.findTabItem(newTestDataName)
+//WindowsEnhancedKeyword.verifyElementPresent(verifyTabItem, FailureHandling.STOP_ON_FAILURE)
+
+Windows.comment('7. Delete the new test data')
+TestsExplorerKeyword.deleteTreeItem(verifyTestDataName)
 
 if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('8. Close Katalon Studio')
 	MainWindowKeyword.close()
 }
+
+
+
 
 

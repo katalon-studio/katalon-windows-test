@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create test suite by using context menu</name>
+   <tag></tag>
+   <comment>2. Open New Test Suite dialog by using context menu
+3. Input test suite inof and press OK
+4. Verify the created test suite is existed under Test Suites folder
+5. Verify the created test suit is opened
+6. Delete created test suite</comment>
+   <testCaseGuid>24f63a7c-148c-4232-9903-cd60823c2b18</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Delete test data file by using context menu</name>
+   <tag></tag>
+   <comment>2. Create new test data
+3. Delete the new test data by using context menu [Right click ->Delete]
+4. Verify the new test data is delete</comment>
+   <testCaseGuid>7a5ee90a-8184-42ac-be55-019316dab3a3</testCaseGuid>
+</TestCaseEntity>

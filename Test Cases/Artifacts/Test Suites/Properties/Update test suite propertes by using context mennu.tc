@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Update test suite propertes by using context mennu</name>
+   <tag></tag>
+   <comment>2. Create a new test suite
+3. View new test suite properties by using context menu (Right click -> Properties)
+4. Change the new test suite properties
+5. View new test suite properties by using context menu (Right click -> Properties)
+6. Verify all new test suite properties are presented and correct
+7. Delete the new test suite</comment>
+   <testCaseGuid>4725e6f3-9bb3-4b7e-9c66-44f28f9fc20b</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test suite at the same folder by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new tets suite
+3. Cut the new tets suite by using shortcut key [Control +X]
+4. Paste the cut test suite at the same folder by using shortcut key [Control +V]
+5. Verify the cut test suite is appeared
+6. Delete the new test suite</comment>
+   <testCaseGuid>67ecde0d-c6b3-43c8-be72-14c03d9dc9a8</testCaseGuid>
+</TestCaseEntity>

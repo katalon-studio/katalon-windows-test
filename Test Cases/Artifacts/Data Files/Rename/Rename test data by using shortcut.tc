@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename test data by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create a new test data
+3. Open rename dialog by using context menu (Right click -> Rename)
+4. Input new test data name
+5. Verify the new test data tree item name is changed
+7. Delete the new test data</comment>
+   <testCaseGuid>0f90e957-878d-4d2c-905c-08c04d386034</testCaseGuid>
+</TestCaseEntity>

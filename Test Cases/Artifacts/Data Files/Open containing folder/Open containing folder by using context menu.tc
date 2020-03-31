@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Open containing folder by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a new test data
+3. Open test data containing folder by using context menu (Right click -> Open containing folder)
+4. Verify the test data containing folder is opened
+5. Close the Containing folder and Delete the new test data</comment>
+   <testCaseGuid>9de61d41-d271-4dfc-bb76-05d065860ca8</testCaseGuid>
+</TestCaseEntity>

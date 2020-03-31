@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Create test data file by using context menu</name>
+   <tag></tag>
+   <comment>2. Open New Test Data dialog by using context menu
+3. Input test Data inof and press OK
+4. Verify the created test Data is existed under Test Data folder
+5. Verify the created test data is opened
+6. Delete created test Data</comment>
+   <testCaseGuid>c399a1cf-b491-4e44-9313-e67a61c6c66e</testCaseGuid>
+</TestCaseEntity>

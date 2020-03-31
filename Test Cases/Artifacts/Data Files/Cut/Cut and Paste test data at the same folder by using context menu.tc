@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test data at the same folder by using context menu</name>
+   <tag></tag>
+   <comment>2. Create new test data
+3. Copy the new test data by using context menu [Right click ->Cut]
+4. Paste the copied test data at the same foler by using context menu [Right click ->Paste]
+5. Verify the cut test data is appeared
+6. Delete cut test data</comment>
+   <testCaseGuid>10701655-6d0e-4e7b-acc4-5dd7d3816fff</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Copy and Paste test data file at the same folder by using context menu</name>
+   <tag></tag>
+   <comment>2. Create new test data
+3. Copy the new test data by using  using context mmenu [Right click -> Copy]
+4. Paste the copied test data at the same foler by  using context mmenu [Right click -> Paste]
+5. Verify the cloned test data is appeared [Name: &quot;&lt;new test data name>&quot; + &quot; - Copy&quot;]
+6. Delete both cloned and new test data</comment>
+   <testCaseGuid>ed56a986-478f-4f49-ae28-c7c7cc45f2e9</testCaseGuid>
+</TestCaseEntity>

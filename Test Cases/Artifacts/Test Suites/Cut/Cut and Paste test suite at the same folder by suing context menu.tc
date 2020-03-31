@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test suite at the same folder by suing context menu</name>
+   <tag></tag>
+   <comment>2. Create new test suite
+3. Cut the new test suit using context menu [Righ click -> Cut]
+4. Paste the created test suite at the same folder using context menu
+5. Verify the new test suite is appeared
+Delete the new test suite</comment>
+   <testCaseGuid>003e8f20-db3f-41fe-8f96-2876d0fc0abf</testCaseGuid>
+</TestCaseEntity>

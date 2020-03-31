@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement
 
 import com.katalon.windows_test.artifacts.ProjectsKeyword
 import com.katalon.windows_test.artifacts.TestCasesKeyword
+import com.katalon.windows_test.artifacts.TestDataKeyword
+import com.katalon.windows_test.components.MainContentKeyword
 import com.katalon.windows_test.components.MainWindowKeyword
 import com.katalon.windows_test.components.TestsExplorerKeyword
 import com.katalon.windows_test.keywords.WindowsEnhancedKeyword
@@ -30,17 +32,14 @@ import internal.GlobalVariable as GlobalVariable
  * [Script]
  *
  * 1. Open `Katalon Studio` and wait for project to load
- * 2. Create a sample test case
- * 3. Create a sample folder
- * 4. Drag and drop the sample test case to the sample folder
- * 5. Verify the sample test case is disappeared from the original folder
- * 6. Verify the sample test case is appeared under the sample folder
- * 7. Delete the sample folder
- * 8. Close Katalon Studio
+ * 2. Create a new data
+ * 3. Open test data containing folder by using context menu (Right click -> Open containing folder)
+ * 4. Verify the test data containing folder is opened
+ * 5. Close the Containing folder and Delete the new test data
+ * 6. Close Katalon Studio
  */
 
-String sampleTestCaseName = NamingKeyword.generateTestCaseName()
-String sampleFolderName = NamingKeyword.generateTestCaseFolderName()
+String newTestDataName = NamingKeyword.generateTestDataName()
 
 if (!GlobalVariable.G_runTestCasesContinuously) {
 	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
@@ -48,32 +47,24 @@ if (!GlobalVariable.G_runTestCasesContinuously) {
 	ProjectsKeyword.waitForProjectLoad()
 }
 
-Windows.comment('2. Create a sample test case')
-TestCasesKeyword.createTestCase(sampleTestCaseName)
+Windows.comment('2. Create a new test data')
+TestDataKeyword.createDataFile(newTestDataName)
 
-Windows.comment('3. Create a sample folder')
-TestCasesKeyword.createFolder(sampleFolderName)
+Windows.comment('3. Open test data containing folder by using context menu (Right click -> Open containing folder)')
+TestsExplorerKeyword.openContextMenuAtTreeItem(newTestDataName)
+WindowsEnhancedKeyword.sendKeys('o')
+WindowsEnhancedKeyword.sendKeys('o')
+WindowsEnhancedKeyword.sendKeys(Keys.ENTER)
 
-Windows.comment('4. Drag and drop the sample test case to the sample folder')
-WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName)
-WebElement sampleFolder = TestsExplorerKeyword.findTreeItem(sampleFolderName)
-WindowsEnhancedKeyword.dragAnDrop(sampleTestCase, sampleFolder)
+Windows.comment('4. Verify the test data containing folder is opened')
+WebElement newTestSuiteTab = MainContentKeyword.findTabItem(newTestDataName)
+WindowsEnhancedKeyword.verifyElementPresent(newTestSuiteTab, FailureHandling.STOP_ON_FAILURE)
 
-Windows.comment('5. Verify the sample test case is disappeared from the original folder')
-Windows.sleep(1000L)
-WebElement originalTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, TestCasesKeyword.ROOT_TEST_CASES_FOLDER_NAME)
-WindowsEnhancedKeyword.verifyElementNotPresent(originalTestCase, FailureHandling.STOP_ON_FAILURE)
-
-Windows.comment('6. Verify the sample test case is appeared under the sample folder')
-WebElement movedTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, sampleFolderName)
-WindowsEnhancedKeyword.verifyElementPresent(movedTestCase, FailureHandling.STOP_ON_FAILURE)
-
-Windows.comment('7. Delete the sample folder')
-TestsExplorerKeyword.deleteTreeItem(sampleFolderName)
+Windows.comment('5. Close the Containing folder and Delete the new test data')
+TestsExplorerKeyword.deleteTreeItem(newTestDataName)
 
 if (!GlobalVariable.G_runTestCasesContinuously) {
-	Windows.comment('8. Close Katalon Studio')
+	Windows.comment('6. Close Katalon Studio')
 	MainWindowKeyword.close()
 }
-
 
