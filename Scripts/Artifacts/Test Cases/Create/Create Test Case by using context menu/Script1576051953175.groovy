@@ -46,12 +46,6 @@ String newTestCaseName = NamingKeyword.generateTestCaseName()
 String newTestCaseDescription = NamingKeyword.generateTestCaseDescription()
 String newTestCaseTag = NamingKeyword.generateTestCaseTag()
 
-if (!GlobalVariable.G_runTestCasesContinuously) {
-	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-	Windows.startApplicationWithTitle(GlobalVariable.G_appPath, "Katalon Studio")
-	ProjectsKeyword.waitForProjectLoad()
-}
-
 Windows.comment('2. Open `New` context menu at `Test Cases` folder')
 TestCasesKeyword.openNewContextMenu()
 

@@ -42,12 +42,6 @@ String sampleTestCaseDescription = NamingKeyword.generateTestCaseDescription()
 String sampleTestCaseTag = NamingKeyword.generateTestCaseTag()
 String sampleTestCaseID = TestCasesKeyword.ROOT_TEST_CASES_FOLDER_NAME + '/' + sampleTestCaseName
 
-if (!GlobalVariable.G_runTestCasesContinuously) {
-	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-	Windows.startApplication(GlobalVariable.G_appPath)
-	ProjectsKeyword.waitForProjectLoad()
-}
-
 Windows.comment('2. Create a sample test case with full properties')
 TestCasesKeyword.createTestCase(sampleTestCaseName, sampleTestCaseDescription, sampleTestCaseTag)
 MainContentKeyword.closeTabItem(sampleTestCaseName)

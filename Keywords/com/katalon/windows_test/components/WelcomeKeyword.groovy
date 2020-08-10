@@ -23,6 +23,10 @@ import internal.GlobalVariable
 public class WelcomeKeyword {
 
 	static void skipWelcomeDialog() {
-		Windows.click(findWindowsObject("Object Repository/Dialogs/Welcome/Button_Skip"));
+		Windows.click(findWindowsObject('Object Repository/Dialogs/Welcome/RadioButton_YesIDo'))
+
+		Windows.click(findWindowsObject('Object Repository/Dialogs/Welcome/Button_GetStarted'))
+
+		Windows.click(findWindowsObject('Object Repository/Dialogs/Welcome/Button_Close'))
 	}
 }
