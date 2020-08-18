@@ -3,6 +3,8 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import com.katalon.windows_test.artifacts.ProjectsKeyword
+import com.katalon.windows_test.keywords.AuthKeyword
 import com.katalon.windows_test.util.ClipboardKeyword
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
@@ -32,6 +34,11 @@ class BeforeAndAfterTestCase {
 	@BeforeTestCase
 	def BeforeTestCase(TestCaseContext testCaseContext) {
 		ClipboardKeyword.setContents("");
+
+		if (!GlobalVariable.G_runTestCasesContinuously) {
+			Windows.startApplicationWithTitle(GlobalVariable.G_appPath, "Katalon Studio")
+			ProjectsKeyword.waitForProjectLoad()
+		}
 	}
 
 	/**

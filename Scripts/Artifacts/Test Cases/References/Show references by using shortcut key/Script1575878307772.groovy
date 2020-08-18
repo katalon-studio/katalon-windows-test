@@ -40,12 +40,6 @@ import org.openqa.selenium.WebElement
 
 String sampleTestCaseName = NamingKeyword.generateTestCaseName()
 
-if (!GlobalVariable.G_runTestCasesContinuously) {
-	Windows.comment('1. Open `Katalon Studio` and wait for project to load')
-	Windows.startApplication(GlobalVariable.G_appPath)
-	ProjectsKeyword.waitForProjectLoad()
-}
-
 Windows.comment('2. Create a sample test case')
 TestCasesKeyword.createTestCase(sampleTestCaseName)
 
