@@ -3,7 +3,7 @@
    <description></description>
    <name>Button_Close</name>
    <tag></tag>
-   <locator>/Window/Window[1]/TitleBar[1]/Button[1]</locator>
+   <locator>//Window[@Name=&quot;Katalon Studio Quick Start&quot;]/TitleBar[1]/Button[@Name=&quot;Close&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
