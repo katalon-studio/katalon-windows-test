@@ -32,6 +32,12 @@ public class MainWindowKeyword {
 		WindowsEnhancedKeyword.releaseKey(Keys.ENTER);
 		WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.ALT, Keys.F4));
 		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		try {
+			Windows.click(findWindowsObject("Object Repository/Dialogs/Close Application/Button_GreatIWillBeBack"));
+		}
+		catch (Exception e) {
+			// Do nothing
+		}
 	}
 
 	static void closeByClickCloseActivation() {
