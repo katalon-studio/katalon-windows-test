@@ -3,77 +3,14 @@
    <description></description>
    <name>RadioButton_YesIDo</name>
    <tag></tag>
-   <locator>/Window/Window[1]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[4]/RadioButton[2]</locator>
+   <locator>//Window[@Name=&quot;Katalon Studio Quick Start&quot;]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[4]/RadioButton[@Name=&quot;Yes, I do&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ElementIndex</name>
-      <type>Main</type>
-      <value>2</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>RuntimeId</name>
-      <type>Main</type>
-      <value>42,856982</value>
-   </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ItemStatus</name>
       <type>Main</type>
       <value></value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>IsRequiredForForm</name>
-      <type>Main</type>
-      <value>False</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>FrameworkId</name>
-      <type>Main</type>
-      <value>SWT</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>Orientation</name>
-      <type>Main</type>
-      <value>None</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>IsOffscreen</name>
-      <type>Main</type>
-      <value>False</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ProcessId</name>
-      <type>Main</type>
-      <value>6980</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>NativeWindowHandle</name>
-      <type>Main</type>
-      <value>856982</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ClassName</name>
-      <type>Main</type>
-      <value>Button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -85,49 +22,77 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>AutomationId</name>
+      <name>IsSelected</name>
       <type>Main</type>
-      <value>856982</value>
+      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>IsContentElement</name>
+      <name>Name</name>
       <type>Main</type>
-      <value>True</value>
+      <value>Yes, I do</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>IsControlElement</name>
+      <name>IsPassword</name>
       <type>Main</type>
-      <value>True</value>
+      <value>False</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>HelpText</name>
+      <name>ClassName</name>
+      <type>Main</type>
+      <value>Button</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>FrameworkId</name>
+      <type>Main</type>
+      <value>SWT</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>AccessKey</name>
       <type>Main</type>
       <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>BoundingRectangle</name>
-      <type>Main</type>
-      <value>2239,552,78,21</value>
-   </properties>
-   <properties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>IsEnabled</name>
+      <name>IsKeyboardFocusable</name>
       <type>Main</type>
       <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>IsKeyboardFocusable</name>
+      <name>RuntimeId</name>
+      <type>Main</type>
+      <value>42.2298224</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsOffscreen</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>21</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsEnabled</name>
       <type>Main</type>
       <value>True</value>
    </properties>
@@ -141,23 +106,37 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>AccessKey</name>
+      <name>IsRequiredForForm</name>
+      <type>Main</type>
+      <value>False</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>HelpText</name>
       <type>Main</type>
       <value></value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>AcceleratorKey</name>
+      <name>AutomationId</name>
       <type>Main</type>
-      <value></value>
+      <value>2298224</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>Name</name>
+      <name>Orientation</name>
       <type>Main</type>
-      <value>Yes, I do</value>
+      <value>None</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsContentElement</name>
+      <type>Main</type>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -169,15 +148,50 @@
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>IsPassword</name>
+      <name>IsAvailable</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>XPath</name>
+      <name>width</name>
       <type>Main</type>
-      <value>/Window/Window[1]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[4]/RadioButton[2]</value>
+      <value>78</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>x</name>
+      <type>Main</type>
+      <value>596</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>y</name>
+      <type>Main</type>
+      <value>396</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ProcessId</name>
+      <type>Main</type>
+      <value>20700</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>IsControlElement</name>
+      <type>Main</type>
+      <value>True</value>
+   </properties>
+   <properties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>AcceleratorKey</name>
+      <type>Main</type>
+      <value></value>
    </properties>
 </WindowsElementEntity>

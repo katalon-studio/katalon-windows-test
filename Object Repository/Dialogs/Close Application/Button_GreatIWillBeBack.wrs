@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowsElementEntity>
    <description></description>
-   <name>Button_GetStarted</name>
+   <name>Button_GreatIWillBeBack</name>
    <tag></tag>
-   <locator>//Window[@Name=&quot;Katalon Studio Quick Start&quot;]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[2]/Image[@Name=&quot;Get Started&quot;]</locator>
+   <locator>//Window[@Name=&quot;Satisfaction Survey&quot;]//Button[@Name=&quot;Great, I will be back&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -24,7 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>Name</name>
       <type>Main</type>
-      <value>Get Started</value>
+      <value>Great, I will be back</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -38,7 +38,7 @@
       <matchCondition>equals</matchCondition>
       <name>ClassName</name>
       <type>Main</type>
-      <value>Static</value>
+      <value>Button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -59,14 +59,14 @@
       <matchCondition>equals</matchCondition>
       <name>IsKeyboardFocusable</name>
       <type>Main</type>
-      <value>False</value>
+      <value>True</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.2950688</value>
+      <value>42.2688246</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -80,7 +80,7 @@
       <matchCondition>equals</matchCondition>
       <name>height</name>
       <type>Main</type>
-      <value>40</value>
+      <value>25</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -115,7 +115,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value>2950688</value>
+      <value>2688246</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -136,35 +136,35 @@
       <matchCondition>equals</matchCondition>
       <name>LocalizedControlType</name>
       <type>Main</type>
-      <value>image</value>
+      <value>button</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>width</name>
       <type>Main</type>
-      <value>140</value>
+      <value>195</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>x</name>
       <type>Main</type>
-      <value>613</value>
+      <value>534</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>y</name>
       <type>Main</type>
-      <value>539</value>
+      <value>369</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>20700</value>
+      <value>8152</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>

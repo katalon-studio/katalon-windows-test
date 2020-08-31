@@ -32,9 +32,19 @@ public class MainWindowKeyword {
 		WindowsEnhancedKeyword.releaseKey(Keys.ENTER);
 		WindowsEnhancedKeyword.sendKeys(Keys.chord(Keys.ALT, Keys.F4));
 		WindowsEnhancedKeyword.sendKeys(Keys.ENTER);
+		clickGreatIWillBeBack();
 	}
 
 	static void closeByClickCloseActivation() {
 		Windows.click(findWindowsObject("Object Repository/Dialogs/Activation/Button_Close"))
+	}
+
+	static void clickGreatIWillBeBack() {
+		try {
+			Windows.click(findWindowsObject("Object Repository/Dialogs/Close Application/Button_GreatIWillBeBack"));
+		}
+		catch (Exception e) {
+			// Do nothing
+		}
 	}
 }
