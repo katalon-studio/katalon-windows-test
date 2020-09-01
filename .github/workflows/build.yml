@@ -21,7 +21,7 @@ jobs:
 #       uses: actions/cache@v1
 #       with:
 #         path: katalon-studio
-#         key: katalon-studio-7.2.1.0
+#         key: katalon-studio-7.7.0
       
     - name: Download KRE
 #       if: steps.cache.outputs.cache-hit != 'true'
@@ -30,7 +30,7 @@ jobs:
         unzip katalon.zip
         rm katalon.zip
       env:
-        KRE_DOWNLOAD_LINK: https://download.katalon.com/7.2.1/Katalon_Studio_Engine_Windows_64-7.2.1.zip
+        KRE_DOWNLOAD_LINK: https://download.katalon.com/7.7.0/Katalon_Studio_Engine_Windows_64-7.7.0.zip
         
     - name: Download KSE
       run: |
@@ -38,15 +38,15 @@ jobs:
         unzip katalon.zip
         rm katalon.zip
       env:
-        KSE_DOWNLOAD_LINK: https://download.katalon.com/7.2.1/Katalon_Studio_Windows_64-7.2.1.zip
+        KSE_DOWNLOAD_LINK: https://download.katalon.com/7.7.0/Katalon_Studio_Windows_64-7.7.0.zip
         
     - name: Run test
       run: | 
         start /d "C:\Program Files (x86)\Windows Application Driver" WinAppDriver.exe 4723
-        set appPath=%cd%\Katalon_Studio_Windows_64-7.2.1\katalon.exe
+        set appPath=%cd%\Katalon_Studio_Windows_64-7.7.0\katalon.exe
         set projectPath=%cd%\katalon-window-test.prj
         set testProjectPath=%cd%\Test_Project
-        cd Katalon_Studio_Engine_Windows_64-7.2.1
+        cd Katalon_Studio_Engine_Windows_64-7.7.0
         katalonc -noSplash -runMode=console -projectPath="%projectPath%" -retry=0 -testSuitePath="Test Suites/Manage Test Cases/All Cases" -executionProfile="ci_env" -browserType="Windows" -apiKey="478f4186-56e2-497d-9238-ea8870c7d8e1" -g_G_appPath="%appPath%" -g_G_projectLocation="%testProjectPath%"
       shell: cmd
         
