@@ -3,7 +3,7 @@
    <description></description>
    <name>RadioButton_YesIDo</name>
    <tag></tag>
-   <locator>//Window[@Name=&quot;Katalon Studio Quick Start&quot;]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[1]/Pane[4]/RadioButton[@Name=&quot;Yes, I do&quot;]</locator>
+   <locator>//Window[@Name=&quot;Katalon Studio Quick Start&quot;]//RadioButton[@Name=&quot;Yes, I do&quot;]</locator>
    <locatorStrategy>XPATH</locatorStrategy>
    <properties>
       <isSelected>false</isSelected>
@@ -73,7 +73,7 @@
       <matchCondition>equals</matchCondition>
       <name>RuntimeId</name>
       <type>Main</type>
-      <value>42.2298224</value>
+      <value>42.855926</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -122,7 +122,7 @@
       <matchCondition>equals</matchCondition>
       <name>AutomationId</name>
       <type>Main</type>
-      <value>2298224</value>
+      <value>855926</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
@@ -178,7 +178,7 @@
       <matchCondition>equals</matchCondition>
       <name>ProcessId</name>
       <type>Main</type>
-      <value>20700</value>
+      <value>18368</value>
    </properties>
    <properties>
       <isSelected>false</isSelected>
