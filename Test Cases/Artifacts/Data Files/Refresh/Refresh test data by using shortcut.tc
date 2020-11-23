@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Refresh test data by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create a new test data
+3. Refresh the new test data by using context menu [Right click ->Refresh]
+4.Verify the created test data is appeared
+5. Delete the new test data</comment>
+   <testCaseGuid>b60f7cbd-e613-40a9-8865-1791f43d9263</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Delete test suite by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new test suite
+3. Delete the new test suite by using shortcut key [Delete]
+4. Verify the new test suite is delete</comment>
+   <testCaseGuid>044f6db6-2c4d-4a87-adbe-200a4c49effa</testCaseGuid>
+</TestCaseEntity>

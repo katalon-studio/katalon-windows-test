@@ -202,4 +202,52 @@
       <isRun>false</isRun>
       <testCaseId>Test Cases/Artifacts/Test Cases/Open containing folder/Open test case containing folder by using context menu (wip)</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>490a1cce-4a15-467c-b14e-464f9d93d598</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Create/Create execution profile by using context menu</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>eeb77138-853f-4ad1-a125-d5731460ee5d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Delete/Delete execution profile by using context menu</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b3210f03-3ab9-4b0b-85b5-579f1ff0cc42</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Delete/Delete execution profile by using shortcut</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4d765f20-6087-4902-85eb-5900ffc7b190</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Delete/Verify default execution profile cannot be deleted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ac7cc7e1-4f81-4bf8-a37f-c657248cfb4d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Rename/Verify default execution profile cannot be rename</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e00849e5-e127-4c09-8a25-5479e3c89295</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Rename/Rename execution profile by using context menu</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5c339be2-6d58-4eeb-bec8-212e36d61f8b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Rename/Rename execution profile by using shortcut</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>076e7383-9234-44d5-8f7d-fe16447eb963</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Artifacts/Profiles/Set Default/Set as Default Profile</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

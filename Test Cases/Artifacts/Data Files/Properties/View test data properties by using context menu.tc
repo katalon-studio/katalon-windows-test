@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>View test data properties by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a new test data with full properties
+3. View new test data properties by using context menu (Right click -> Properties)
+4. Verify all new test data properties are presented and correct
+5. Delete the new test data</comment>
+   <testCaseGuid>2a09d32e-cbe0-4780-ac27-f66152da4624</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename test suite by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a new test suite
+3. Open rename dialog by using context menu (Right click -> Rename)
+4. Input new test suite name
+5. Verify the new test suite tree item name is changed
+7. Delete the new test suite</comment>
+   <testCaseGuid>567efaee-05d0-43c7-9d06-2b16ba1483af</testCaseGuid>
+</TestCaseEntity>

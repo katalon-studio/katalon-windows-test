@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set as Default Profile</name>
+   <tag></tag>
+   <comment>2. Open `New` execution profile at `Profiles` folder
+3. Input execution profile name and press OK
+5. Verify the created execution profile is existed under Profiles folder
+6. Verify the created execution profile is opened
+7. Set the created execution profile as default execution profile
+8. Verify the created execution profile is default execution profile
+defaultEecutionProfileName
+9. Set the created execution profile as default execution profile
+10. Delete the created execution profile</comment>
+   <testCaseGuid>aa09678d-e7f0-47ee-ba04-974bd8b58875</testCaseGuid>
+</TestCaseEntity>

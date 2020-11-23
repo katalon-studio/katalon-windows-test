@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify default execution profile cannot be rename</name>
+   <tag></tag>
+   <comment>2. Open context menu at treeitem name default
+3. Get menu item rename
+4. Verify menu item rename is disable
+5. Close tree item Profiles</comment>
+   <testCaseGuid>bb25d6ef-ccd1-4461-9be7-b091e9fb7305</testCaseGuid>
+</TestCaseEntity>

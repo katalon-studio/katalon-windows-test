@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Rename test suite by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create a new test suite
+3. Open rename dialog by using context menu (Right click -> Rename)
+4. Input new test suite name
+5. Verify the new test suite tree item name is changed
+7. Delete the new test suite</comment>
+   <testCaseGuid>3d5a222e-7c29-4a34-8eb3-fc6f31c19037</testCaseGuid>
+</TestCaseEntity>

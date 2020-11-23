@@ -28,6 +28,8 @@ import org.openqa.selenium.NoSuchElementException
 public class TestsExplorerKeyword {
 	public static final String TESTS_EXPLORER_NAME = "Tests Explorer";
 
+	public static final String TESTS_EXPLORER_PROFILES_NAME = "Profiles";
+
 	static WebElement findTreeItem(String treeItemName) {
 		return findTreeItem(treeItemName, '');
 	}
@@ -54,12 +56,29 @@ public class TestsExplorerKeyword {
 		return treeItem;
 	}
 
+	static WebElement getFirstChildItem(String treeItemName) {
+		return getFirstChildItem(treeItemName, '');
+	}
+
+	static WebElement getFirstChildItem(String treeItemName, parentFolderName ) {
+		String treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]/*[1]',
+				TESTS_EXPLORER_NAME, treeItemName);
+		if (!StringUtils.isEmpty(parentFolderName)) {
+			treeItemXPath = String.format('//Pane[@Name="%s"]//TreeItem[@Name="%s"]/TreeItem[@Name="%s"]/*[1]',
+					TESTS_EXPLORER_NAME, parentFolderName, treeItemName);
+		}
+		return WindowsEnhancedKeyword.findElementByXPath(treeItemXPath);
+	}
+
 	static WebElement openTreeItem(String treeItemName) {
 		return openTreeItem(treeItemName, '');
 	}
 
 	static WebElement openTreeItem(String treeItemName, String parentFolderName) {
 		WebElement treeItem = findTreeItem(treeItemName, parentFolderName);
+//		if ("Expanded".equalsIgnoreCase(treeItem.getAttribute("ExpandCollapseState"))) {
+//			return treeItem;
+//		}
 		treeItem.sendKeys(Keys.ENTER);
 		return treeItem;
 	}
@@ -118,5 +137,13 @@ public class TestsExplorerKeyword {
 		}
 		openContextMenuAtTreeItem(treeItemName);
 		WindowsEnhancedKeyword.sendKeys('n');
+	}
+
+	static WebElement findContextMenuItem(String menuItemName) {
+		Windows.switchToDesktop();
+		String menuItemXpath = String.format('//Menu[@Name="Context"]//MenuItem[@Name="%s"]', menuItemName);
+		WebElement menuItem = WindowsEnhancedKeyword.findElementByXPath(menuItemXpath);
+		Windows.switchToApplication();
+		return menuItem;
 	}
 }

@@ -31,7 +31,7 @@ public class NamingKeyword {
 	public static String generateTestCaseName() {
 		return generateRandomUUID();
 	}
-
+	
 	public static String generateTestCaseDescription() {
 		return "Hello!" + " (" + generateRandomUUID() + ")";
 	}
@@ -39,4 +39,33 @@ public class NamingKeyword {
 	public static String generateTestCaseTag() {
 		return "Hello Tag!" + " (" + generateRandomUUID() + ")";
 	}
+
+	public static String generateProfileName() {
+		return generateRandomUUID();
+	}
+
+	public static String generateTestSuiteName(){
+		return generateRandomUUID();
+	}
+
+	public static String generateTestSuiteFolderName() {
+		return generateRandomUUID();
+	}
+
+	public static String generateTestSuiteDescription(){
+		return "Hello!" + " (" + generateRandomUUID() + ")";
+	}
+
+	public static String generateTestDataName(){
+		return generateRandomUUID();
+	}
+	
+	public static String generateTestDataDescription(){
+		return "Hello!" + " (" + generateRandomUUID() + ")";
+	}
+	
+	public static String generateTestDataFolderName(){
+		return generateRandomUUID(); 
+	}
+	
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Refresh test suite by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a new test suite
+3. Refresh the new test suite by using context menu [Right click ->Refresh
+4.Verify the created test suite is appeared
+5. Delete the new test suite</comment>
+   <testCaseGuid>26636409-78f8-4a8d-bd6a-fc3aa8bbcb06</testCaseGuid>
+</TestCaseEntity>

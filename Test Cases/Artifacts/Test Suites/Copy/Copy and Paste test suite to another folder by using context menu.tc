@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Copy and Paste test suite to another folder by using context menu</name>
+   <tag></tag>
+   <comment>2. Create new test suite
+3. Create new folder
+4. Copy the created test suite by using context menu [Right click -> Copy]
+5. Paste the copied test suite to th new folder using context menu [Right click -> Paste]
+6. Verify the cloned test suite is appeared uder the new folder
+7. Delete both new folder and new test suite</comment>
+   <testCaseGuid>587dcf1b-2de8-43cb-b174-2bc168fa070b</testCaseGuid>
+</TestCaseEntity>

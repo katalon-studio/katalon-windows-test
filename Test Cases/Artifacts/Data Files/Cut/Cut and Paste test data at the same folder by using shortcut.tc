@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test data at the same folder by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new test data
+3. Cut the new test data by using shortcut key [Control + X]
+4. Paste the cut test data at the same foler by using context menu [Right click ->Paste]
+5. Verify the cut test data is appeared
+6. Delete cut test data</comment>
+   <testCaseGuid>80786b0b-e342-404b-b964-fbf3cea6fdae</testCaseGuid>
+</TestCaseEntity>

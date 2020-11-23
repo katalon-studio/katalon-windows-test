@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Copy and Paste test data file to another folder by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new test data
+3. Create new folder
+4. Copy the new test data by using shortcut key [Control + C]
+5. Paste the copied test data to another foler by using shortcut key [Control + V]
+6. Verify the cloned test data is appeared under the new folder
+7. Delete both cloned test data and new folder</comment>
+   <testCaseGuid>9bba3732-0970-41b6-85ad-b06090a43769</testCaseGuid>
+</TestCaseEntity>

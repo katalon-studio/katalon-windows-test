@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>View test suite pproperties by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a new test suite with full properties
+3. View new test suite properties by using context menu (Right click -> Properties)
+4. Verify all new test suite properties are presented and correct
+5. Delete the new test suite</comment>
+   <testCaseGuid>cf27fa0f-ce00-4d63-a978-c2cc2054792d</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test suite to another folder by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new test suite
+3. Create new folder
+4. Cut the new test suite by using shortcut key [Control +X]
+5. Paste the cut test suite to another folder by using shortcut key [Control +V]
+6. Verify the cut test suite is appeared under the new folder
+7. Delete new folder</comment>
+   <testCaseGuid>d0dea966-5d30-4c6f-9e1c-7f7194591439</testCaseGuid>
+</TestCaseEntity>

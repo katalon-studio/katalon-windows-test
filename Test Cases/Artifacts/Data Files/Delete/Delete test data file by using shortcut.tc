@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Delete test data file by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new test data
+3. Delete the new test data by using shortcut key [Delete]
+4. Verify the new test data is delete</comment>
+   <testCaseGuid>68d727aa-1a60-4412-94a6-da5e3fc063e1</testCaseGuid>
+</TestCaseEntity>

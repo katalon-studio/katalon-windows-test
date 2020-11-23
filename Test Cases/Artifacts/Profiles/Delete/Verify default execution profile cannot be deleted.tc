@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify default execution profile cannot be deleted</name>
+   <tag></tag>
+   <comment>2. Open context menu at treeitem name default
+3. Get menu item delete
+4. Verify menu item delete is disable
+5. Close tree item Profiles</comment>
+   <testCaseGuid>2f0f6970-889e-4b11-9afc-c0a34386979f</testCaseGuid>
+</TestCaseEntity>

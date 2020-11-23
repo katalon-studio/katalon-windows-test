@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test suite to another folder by using context menu</name>
+   <tag></tag>
+   <comment>2. Create new test suite
+3. Create new folder
+ 4. Cut the new test suite by using context menu [Right click -> Cut]
+5. Paste the cut test suite to the new folder by using context menu [Right click -> Paste]
+6. Verify the cut test suite is appeared under the new folder
+7. Delete new folder</comment>
+   <testCaseGuid>43048a62-64e7-4021-99cd-1a188ef6b8d7</testCaseGuid>
+</TestCaseEntity>

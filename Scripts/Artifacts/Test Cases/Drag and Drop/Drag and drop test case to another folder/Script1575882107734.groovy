@@ -33,10 +33,10 @@ import internal.GlobalVariable as GlobalVariable
  * 2. Create a sample test case
  * 3. Create a sample folder
  * 4. Drag and drop the sample test case to the sample folder
- * 6. Verify the sample test case is disappeared from the original folder
- * 7. Verify the sample test case is appeared under the sample folder
- * 8. Delete the sample folder
- * 9. Close Katalon Studio
+ * 5. Verify the sample test case is disappeared from the original folder
+ * 6. Verify the sample test case is appeared under the sample folder
+ * 7. Delete the sample folder
+ * 8. Close Katalon Studio
  */
 
 String sampleTestCaseName = NamingKeyword.generateTestCaseName()
@@ -53,20 +53,20 @@ WebElement sampleTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName
 WebElement sampleFolder = TestsExplorerKeyword.findTreeItem(sampleFolderName)
 WindowsEnhancedKeyword.dragAnDrop(sampleTestCase, sampleFolder)
 
-Windows.comment('6. Verify the sample test case is disappeared from the original folder')
+Windows.comment('5. Verify the sample test case is disappeared from the original folder')
 Windows.sleep(1000L)
 WebElement originalTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, TestCasesKeyword.ROOT_TEST_CASES_FOLDER_NAME)
 WindowsEnhancedKeyword.verifyElementNotPresent(originalTestCase, FailureHandling.STOP_ON_FAILURE)
 
-Windows.comment('7. Verify the sample test case is appeared under the sample folder')
+Windows.comment('6. Verify the sample test case is appeared under the sample folder')
 WebElement movedTestCase = TestsExplorerKeyword.findTreeItem(sampleTestCaseName, sampleFolderName)
 WindowsEnhancedKeyword.verifyElementPresent(movedTestCase, FailureHandling.STOP_ON_FAILURE)
 
-Windows.comment('8. Delete the sample folder')
+Windows.comment('7. Delete the sample folder')
 TestsExplorerKeyword.deleteTreeItem(sampleFolderName)
 
 if (!GlobalVariable.G_runTestCasesContinuously) {
-	Windows.comment('9. Close Katalon Studio')
+	Windows.comment('8. Close Katalon Studio')
 	MainWindowKeyword.close()
 }
 

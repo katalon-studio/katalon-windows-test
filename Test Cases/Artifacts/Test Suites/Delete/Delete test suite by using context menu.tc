@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Delete test suite by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a new test suite
+3. Delete the new test suite by using context menu
+4. Verify the new test suite is deleted</comment>
+   <testCaseGuid>17cd03cc-c722-4b0a-81e2-a0f6bc12b099</testCaseGuid>
+</TestCaseEntity>

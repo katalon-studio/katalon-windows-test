@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Delete execution profile by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a sample execution profile
+3. Delete the sample execution profile by using context menu
+4. Verify the sample execution profile is deleted
+5. Verify the sample execution profile is closed</comment>
+   <testCaseGuid>d0de77f0-ce04-4743-9bb1-e79a9fe9f099</testCaseGuid>
+</TestCaseEntity>

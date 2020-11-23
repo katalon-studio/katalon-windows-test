@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Copy and Paste test suite to another folder by using shortcut</name>
+   <tag></tag>
+   <comment>2. Create new test suite
+3. Create new folder
+4. Copy the created test suite by using shortcut key [Control + C]
+5. Paste the copied test suite to the new folder using shortcut key [Control + V]
+6. Verify the cloned test suite is appeared under the new folder
+7. Delete both new folder and new tets suite</comment>
+   <testCaseGuid>b014f320-b28f-4755-bd8f-9f8774bc299a</testCaseGuid>
+</TestCaseEntity>

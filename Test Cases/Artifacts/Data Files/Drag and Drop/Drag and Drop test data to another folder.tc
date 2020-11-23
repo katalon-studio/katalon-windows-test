@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Drag and Drop test data to another folder</name>
+   <tag></tag>
+   <comment>2. Create new test data
+3. Crate new folder
+4. Drap and drop the new test data to the new folder
+5. Verify the new test data is disappeared form the original folder
+7. Delete the new folder</comment>
+   <testCaseGuid>2d035711-5071-46ac-8efc-ef03bfd5399a</testCaseGuid>
+</TestCaseEntity>
