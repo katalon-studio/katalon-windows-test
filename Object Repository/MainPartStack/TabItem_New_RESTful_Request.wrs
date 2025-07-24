@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>TabItem_New_RESTful_Request</name>
+   <tag></tag>
+   <locator>//TabItem[@Name=&quot;New RESTful Request&quot; and @HelpText=&quot;Object Repository/New RESTful Request&quot;]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>

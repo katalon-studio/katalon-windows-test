@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>MenuItem_Delete</name>
+   <tag></tag>
+   <locator>//Menu/MenuItem[@Name=&quot;Delete&quot;]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>

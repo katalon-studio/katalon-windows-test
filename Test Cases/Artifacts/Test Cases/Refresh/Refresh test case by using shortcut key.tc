@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Refresh test case by using shortcut key</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Refresh the sample test case by using shortcut key [F5]
+4. Delete the sample test case</comment>
+   <testCaseGuid>15c5da71-ab9a-436e-895c-a6b7a14e38bd</testCaseGuid>
+</TestCaseEntity>

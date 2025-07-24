@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>MenuItem_Windows_Object</name>
+   <tag></tag>
+   <locator>Windows Object</locator>
+   <locatorStrategy>NAME</locatorStrategy>
+</WindowsElementEntity>

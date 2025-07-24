@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Cut and Paste test case to another folder by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Create a sample folder
+4. Cut the sample test case by using context menu (Right click -> Cut)
+5. Paste the cut test case to the sample folder by using context menu (Right click -> Paste)
+6. Verify the sample test case is disappeared from the original folder
+7. Verify the sample test case is appeared under the sample folder
+8. Delete the sample folder</comment>
+   <testCaseGuid>43e6fab7-f70f-450f-bcea-00077d0c7a52</testCaseGuid>
+</TestCaseEntity>

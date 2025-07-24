@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>Edit_Name</name>
+   <tag></tag>
+   <locator>//Window[@Name=&quot;New&quot;]//Edit[@Name=&quot;Name&quot;]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>

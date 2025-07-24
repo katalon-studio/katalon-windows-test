@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>TreeItem_Parent_Test_Object</name>
+   <tag></tag>
+   <locator>//Window[@Name=&quot;Object Repository Browser&quot;]//Tree/TreeItem[@Name=&quot;Parent Test Object&quot;]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>

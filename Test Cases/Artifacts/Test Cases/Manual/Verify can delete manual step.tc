@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Verify can delete manual step</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b86f3843-79dd-4a7b-8144-412142b14941</testCaseGuid>
+</TestCaseEntity>

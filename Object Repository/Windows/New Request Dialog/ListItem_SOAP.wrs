@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowsElementEntity>
+   <description></description>
+   <name>ListItem_SOAP</name>
+   <tag></tag>
+   <locator>//List[@Name=&quot;Request Type&quot;]/ListItem[@Name=&quot;SOAP&quot;]</locator>
+   <locatorStrategy>XPATH</locatorStrategy>
+</WindowsElementEntity>

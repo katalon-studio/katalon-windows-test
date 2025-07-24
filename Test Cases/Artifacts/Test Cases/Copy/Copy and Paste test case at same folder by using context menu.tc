@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Copy and Paste test case at same folder by using context menu</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Copy the sample test case by using context menu (Right click -> Copy)
+4. Paste the copied test case at the same folder by using context menu (Right click -> Paste)
+5. Verify the cloned test case is appeared (Name: &quot;&lt;sample test case name> - Copy&quot;)
+6. Delete both sample test case and cloned test case</comment>
+   <testCaseGuid>111e1163-db65-48a4-87a3-c3fb412b1045</testCaseGuid>
+</TestCaseEntity>

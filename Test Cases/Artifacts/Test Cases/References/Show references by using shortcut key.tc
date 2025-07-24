@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Show references by using shortcut key</name>
+   <tag></tag>
+   <comment>2. Create a sample test case
+3. Show References by using shortcut key [Ctrl + R]
+4. Verify test case references are listed under Search tab
+5. Delete the sample test case</comment>
+   <testCaseGuid>70b2b9e9-0d3a-4d61-b0c3-6c99186faa54</testCaseGuid>
+</TestCaseEntity>
